@@ -1,0 +1,28 @@
+nav {
+    background: #141414;
+}
+
+#logo {
+    height: 60px;
+    width: 105px;
+    margin-left: 10px;
+}
+
+#button-hamburguer {
+    font-size: 1.6rem;
+    margin-right: 2vw;
+}
+
+.navbar-style-link {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-right: 1.6vw;
+}
+
+.navbar-style-link:hover {
+    color: #437DBF;
+}
+
+#ativa {
+    color: #437DBF;
+}
