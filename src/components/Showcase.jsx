@@ -3,10 +3,15 @@ import './showcase.css'
 function Showcase() {
     return(
         <section>
-            <div className="container-fluid">
-                <div className="masthead">
-                    <h1>hoje tem go do gabiGo</h1>
-                    {/* style="background-image: url('../img/img1-2.jpg');" */}
+            <div className="container-fluid masthead">
+                <div id="container-showcase">
+                    <h1>Desenvolvimento</h1>
+                    <h1 className="color-h1-blue">Web e Mobile</h1>
+                    <p id="layout-info">
+                    Especializados nas tecnologias mais modernas para atender
+                    quais quer necessidades que você tenha.
+                    </p>
+                    <button type="button" className="btn-about-us" >Sobre nós</button>
                 </div>
             </div>
         </section>

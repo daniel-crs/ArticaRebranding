@@ -1,4 +1,78 @@
-.mastherad {
+.masthead {
+    background-image: url(../../public/img/img3.jpg);
     background-size: cover;
-    height: 60vh;
+    min-height: 90vh;
+    position: relative;
+}
+
+#container-showcase {
+    padding-top: 40vh;
+    margin-left: 25px;
+}
+
+.masthead h1 {
+    color: #fff;
+    font-size: 2.6em;
+}
+
+.masthead .color-h1-blue {
+    color: #437DBF;
+    margin-top: -0.3em;
+}
+
+#layout-info {
+    width: 550px;
+    text-align: left;
+    font-size: 1.6em;
+    margin-top: 1vh;
+}
+
+.btn-about-us {
+    background: #437DBF;
+    color: #fff;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        min-height: 50vh;
+    }
+
+    #container-showcase {
+        padding-top: 25vh;
+        margin-left: 10px;
+    }
+    
+    .masthead h1 {
+        color: #fff;
+        font-size: 1.6em;
+    }
+    
+    .masthead .color-h1-blue {
+        color: #437DBF;
+        margin-top: -0.3em;
+    }
+    
+    #layout-info {
+        width: 350px;
+        text-align: left;
+        font-size: 1.1em;
+        margin-top: 1px;
+    }
+    
+    .btn-about-us {
+        background: #437DBF;
+        color: #fff;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+        height: 45px;
+        margin-top: -5px;
+    }
+    
 }
