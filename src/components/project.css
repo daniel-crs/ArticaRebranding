@@ -1,0 +1,35 @@
+.containerCardProject {
+    margin: 0 auto;
+}
+
+.customCardProject {
+    background: #1D1D1D !important;
+    height: 55vh !important;
+    width: 80vw;
+}
+
+.custom-img-project {
+    height: 25vh;
+}
+
+.custom-Card-project {
+    font-size: 1.5em !important;
+    color: #437DBF;
+}
+
+.custom-Card-project-text {
+    color: #fff;
+    width: 72vw;
+    height: 12.5vh;
+    font-size: 16px;
+}
+
+.button-project {
+    margin-top: 10px;
+    width: 45vw;
+    height: 5vh;
+    font-size: 1.1em;
+    background: #1D1D1D;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}

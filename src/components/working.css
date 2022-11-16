@@ -1,0 +1,25 @@
+.containerCard {
+    margin: 0 50px;
+}
+
+.customCard {
+    background: #1D1D1D !important;
+    height: 35vh !important;
+    width: 100%;
+}
+
+.custom-Card-subtitle {
+    font-size: 1.5em !important;
+    color: #437DBF;
+    padding-top: 5px;
+}
+
+.custom-Card-text {
+    padding-top: 5px;
+    width: 22.5vw;
+}
+
+.number-color {
+    color: #fff;
+    font-size: 1.3em !important;
+}
