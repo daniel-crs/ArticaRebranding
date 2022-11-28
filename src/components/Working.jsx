@@ -1,108 +1,91 @@
-import './working.css'
+import "./working.css";
+
+// core version + navigation, pagination modules:
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import Swiper and modules styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import CustomCard from "./WorkingCard";
+import Container from "react-bootstrap/Container";
 
 function Working() {
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        </div>
+  return (
+    <Container>
+      <h2 className="how_we_work">Como Trabalhamos</h2>
+      <hr className="how_we_work_hr"></hr>
 
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div className="row">
-                                    <div className="col-lg-4">
-                                        <div className="single-box">
-                                            <div className="text-bov">
-                                                <h3>01</h3>
-                                                <h3>Reuniões</h3>
-                                                <p>
-                                                    Vamos realizar reuniões para entender os objetivos e 
-                                                    fun-cionalidades que você deseja que tenha no seu projeto.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-lg-4">
-                                        <div className="single-box">
-                                            <div className="text-bov">
-                                                <h3>02</h3>
-                                                <h3>Reuniões</h3>
-                                                <p>
-                                                    Vamos realizar reuniões para entender os objetivos e 
-                                                    fun-cionalidades que você deseja que tenha no seu projeto.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-lg-4">
-                                        <div className="single-box">
-                                            <div className="text-bov">
-                                                <h3>03</h3>
-                                                <h3>Reuniões</h3>
-                                                <p>
-                                                    Vamos realizar reuniões para entender os objetivos e 
-                                                    fun-cionalidades que você deseja que tenha no seu projeto.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div className="row">
-                                    <div className="col-lg-4">
-                                        <div className="single-box">
-                                            <div className="text-bov">
-                                                <h3>04</h3>
-                                                <h3>Reuniões</h3>
-                                                <p>
-                                                    Vamos realizar reuniões para entender os objetivos e 
-                                                    fun-cionalidades que você deseja que tenha no seu projeto.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-lg-4">
-                                        <div className="single-box">
-                                            <div className="text-bov">
-                                                <h3>05</h3>
-                                                <h3>Reuniões</h3>
-                                                <p>
-                                                    Vamos realizar reuniões para entender os objetivos e 
-                                                    fun-cionalidades que você deseja que tenha no seu projeto.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-lg-4">
-                                        <div className="single-box">
-                                            <div className="text-bov">
-                                                <h3>06</h3>
-                                                <h3>Reuniões</h3>
-                                                <p>
-                                                    Vamos realizar reuniões para entender os objetivos e 
-                                                    fun-cionalidades que você deseja que tenha no seu projeto.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>     
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },
+        }}
+        modules={[Pagination, Navigation]}
+        loop
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <CustomCard
+            title="01"
+            subtitle="Reuniões"
+            cardText="Vamos realizar reuniões para entender os objetivos e funcionalidades que você deseja que tenha no seu projeto. Desta forma poderemos estipilar o valor do projeto precisar baseada no tempo para implementar."
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="02"
+            subtitle="Orçamento"
+            cardText="Após a primeira reunião, nos iremos calcular seu orçamento baseado nas funcionalidades que deveram estar presentes no seu projeto."
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="03"
+            subtitle="Prototipo "
+            cardText="Baseado nas reuniões, nesta etapa faremos protótipos do seu projeto para validar o design com você antes de desenvolver. "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="04"
+            subtitle="Sub-title"
+            cardText="Ainda por vir o texto"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="05"
+            subtitle="Sub-title"
+            cardText="Ainda por vir o texto"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="06"
+            subtitle="Sub-title"
+            cardText="Ainda por vir o texto"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </Container>
+  );
 }
 
 export default Working;

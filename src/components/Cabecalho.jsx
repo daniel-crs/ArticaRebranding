@@ -15,7 +15,7 @@ function Cabecalho() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark" id="button-hamburguer"/>
                 
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                    <navbar-nav className="navbar-option">
+                    <navbar-nav>
                         <Nav>
                             <nav-item>
                                 <Nav.Link className="navbar-style-link"  id="ativa" href="#home">Home</Nav.Link>

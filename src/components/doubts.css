@@ -1,0 +1,41 @@
+.doubts-title {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.doubts-text {
+    width: 80vw;
+}
+
+.plus-icon {
+    color: #437DBF;
+    height: 60px;
+    width: 60px;
+    margin-left: -10px;
+}
+
+.accordion-button {
+    height: 6vh;
+    margin: 0 auto;
+    border: none !important;
+}
+
+.accordion-item {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .doubts-title {
+        text-align: left;
+    }
+    
+    .doubts-text {
+        width: 45vw;
+    }
+
+    .plus-icon {
+        color: #437DBF;
+        height: 35px;
+        width: 35px;
+    }    
+}

@@ -1,0 +1,49 @@
+.containerCardProject {
+    margin: 0 auto;
+}
+
+.customCardProject {
+    background: #1D1D1D !important;
+    height: 56vh !important;
+    width: 80vw;
+}
+
+.custom-img-project {
+    height: 25vh;
+}
+
+.custom-Card-project {
+    font-size: 1.5em !important;
+    color: #437DBF;
+}
+
+.custom-Card-project-text {
+    color: #fff;
+    width: 72vw;
+    height: 12.5vh;
+    font-size: 16px;
+}
+
+.button-project {
+    margin: 10px 0 0 60px;
+    width: 45vw;
+    height: 5vh;
+    font-size: 1.1em;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid #fff !important;
+    border-radius: 10px;
+}
+
+.button-project:hover {
+    background: #437DBF !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+}
+
+.swiper-pagination-bullet {
+	background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #437DBF !important;
+}

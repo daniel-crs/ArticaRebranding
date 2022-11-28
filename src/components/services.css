@@ -75,6 +75,6 @@ h2, h3 {
         border-radius: 10px;
         background-color: #437DBF;
         width: 75vw;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 }
