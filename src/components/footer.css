@@ -21,6 +21,11 @@
     text-align: left;
 }
 
+.sitemap-footer-info {
+    width: 90vw;
+    border: 1px solid red;
+}
+
 .sitemap-footer-info a {
     color: #fff;
     text-decoration: none;

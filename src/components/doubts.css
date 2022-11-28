@@ -15,9 +15,17 @@
 }
 
 .accordion-button {
+    background-color: #000 !important;
     height: 6vh;
     margin: 0 auto;
-    border: none !important;
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-body {
+    background-color: #000 !important;
+    box-shadow: none;
+    border: none;
 }
 
 .accordion-item {
