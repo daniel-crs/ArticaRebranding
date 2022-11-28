@@ -1,65 +1,69 @@
-import './project.css'
+import "./project.css";
 
-import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import ProjectInfo from "./ProjectInfo";
+import ProjectCard from "./ProjectCard";
+
+// core version + navigation, pagination modules:
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import Swiper and modules styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import Container from "react-bootstrap/Container";
 
 function Project() {
-    return (
-        <Container>
-            <Row>
-                <Col>
-                    <Carousel controls={false}>
-                        <Carousel.Item>
-                            <Card className="containerCardProject customCardProject">
-                                <Card.Img className="custom-img-project" variant="top" src="../../img/img-test-1.jpg" />
-                                <Card.Body>
-                                    <Card.Title className="custom-Card-project">ClayPhone</Card.Title>
-                                    <Card.Text className="custom-Card-project-text">
-                                        ClayPhone é um aplicativo para te ajudar a organizar 
-                                        os seus horários de forma simples. Pensado para deixar sua 
-                                        usa-bilidade a melhor possível para você.
-                                    </Card.Text>
-                                    <Button className="button-project">Ver projeto</Button>
-                                </Card.Body>
-                            </Card>  
-                        </Carousel.Item>
+  return (
+    <Container>
+      <ProjectInfo />
 
-                        <Carousel.Item>
-                            <Card className="containerCardProject customCardProject">
-                                <Card.Img className="custom-img-project" variant="top" src="../../img/img-test-5.png" />
-                                <Card.Body>
-                                    <Card.Title className="custom-Card-project">Free Delivery</Card.Title>
-                                    <Card.Text className="custom-Card-project-text">
-                                        Um aplicativo especializado em deliveries dos mais variados produtos com muita 
-                                        eficiência e os valores mais competitivos do mercado. Não perca...
-                                    </Card.Text>
-                                    <Button className="button-project">Ver projeto</Button>
-                                </Card.Body>
-                            </Card>  
-                        </Carousel.Item>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        }}
+        modules={[Pagination, Navigation]}
+        loop
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <ProjectCard
+            imgProject="../../img/img-test-1.jpg"
+            title="ClayPhone"
+            cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
+            horários de forma simples. Pensado para deixar sua usa-bilidade
+            a melhor possível para você."
+          />
+        </SwiperSlide>
 
-                        <Carousel.Item>
-                            <Card className="containerCardProject customCardProject">
-                                <Card.Img className="custom-img-project" variant="top" src="../../img/img-test-4.webp" />
-                                <Card.Body>
-                                    <Card.Title className="custom-Card-project">Pesto Itallian Food</Card.Title>
-                                    <Card.Text className="custom-Card-project-text">
-                                        Pesto e um restaurante italiano que te traz uma experiência idêntica a 
-                                        de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo...
-                                    </Card.Text>
-                                    <Button className="button-project">Ver projeto</Button>
-                                </Card.Body>
-                            </Card>  
-                        </Carousel.Item>
-                    </Carousel>
-                </Col>
-            </Row>
-        </Container>
-    )
+        <SwiperSlide>
+          <ProjectCard
+            imgProject="../../img/img-test-5.png"
+            title="Free Delivery"
+            cardText="Um aplicativo especializado em deliveries dos mais variados produtos com muita
+            eficiência e os valores mais competitivos do mercado. Não perca..."
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ProjectCard
+            imgProject="../../img/img-test-4.webp"
+            title="Pesto Itallian Food"
+            cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
+            de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
+          />
+        </SwiperSlide>
+      </Swiper>
+    </Container>
+  );
 }
 
 export default Project;

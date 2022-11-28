@@ -1,0 +1,17 @@
+.about-us-title {
+    text-align: left;
+}
+
+.about-us-text {
+    width: 95vw;
+}
+
+@media (min-width: 768px) {
+    .about-us-title {
+        text-align: left;
+    }
+    
+    .about-us-text {
+        width: 45vw;
+    }
+}

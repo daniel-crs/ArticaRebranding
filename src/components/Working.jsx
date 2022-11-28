@@ -8,16 +8,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import CustomCard from "./CustomCard";
+import CustomCard from "./WorkingCard";
 import Container from "react-bootstrap/Container";
 
 function Working() {
   return (
     <Container>
+      <h2 className="how_we_work">Como Trabalhamos</h2>
+      <hr className="how_we_work_hr"></hr>
+
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
-        navigation
         pagination={{
           clickable: true,
         }}
@@ -40,13 +42,46 @@ function Working() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <CustomCard title="01" subtitle="Subtitle" cardText="Agora vai" />
+          <CustomCard
+            title="01"
+            subtitle="Reuniões"
+            cardText="Vamos realizar reuniões para entender os objetivos e funcionalidades que você deseja que tenha no seu projeto. Desta forma poderemos estipilar o valor do projeto precisar baseada no tempo para implementar."
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard title="01" subtitle="Subtitle" cardText="Agora vai" />
+          <CustomCard
+            title="02"
+            subtitle="Orçamento"
+            cardText="Após a primeira reunião, nos iremos calcular seu orçamento baseado nas funcionalidades que deveram estar presentes no seu projeto."
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard title="01" subtitle="Subtitle" cardText="Agora vai" />
+          <CustomCard
+            title="03"
+            subtitle="Prototipo "
+            cardText="Baseado nas reuniões, nesta etapa faremos protótipos do seu projeto para validar o design com você antes de desenvolver. "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="04"
+            subtitle="Sub-title"
+            cardText="Ainda por vir o texto"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="05"
+            subtitle="Sub-title"
+            cardText="Ainda por vir o texto"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CustomCard
+            title="06"
+            subtitle="Sub-title"
+            cardText="Ainda por vir o texto"
+          />
         </SwiperSlide>
       </Swiper>
     </Container>

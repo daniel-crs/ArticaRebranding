@@ -4,7 +4,7 @@
 
 .customCardProject {
     background: #1D1D1D !important;
-    height: 55vh !important;
+    height: 56vh !important;
     width: 80vw;
 }
 
@@ -25,11 +25,25 @@
 }
 
 .button-project {
-    margin-top: 10px;
+    margin: 10px 0 0 60px;
     width: 45vw;
     height: 5vh;
     font-size: 1.1em;
-    background: #1D1D1D;
-    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid #fff !important;
     border-radius: 10px;
+}
+
+.button-project:hover {
+    background: #437DBF !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+}
+
+.swiper-pagination-bullet {
+	background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #437DBF !important;
 }

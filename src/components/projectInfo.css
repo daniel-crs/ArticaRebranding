@@ -2,7 +2,8 @@
     margin: 50px 0;
     background-image: url(../assets/bg2.jpg);
     background-size: cover;
-    min-height: 22.5vh;
+    width: 100%;
+    height: 22.5vh;
     position: relative;
 }
 
@@ -11,6 +12,7 @@
 }
 
 .container-projectInfo h2 {
+    margin-top: 20px;
     color: #437DBF !important;
     padding-top: 0.5em;
     color: #fff;
@@ -24,11 +26,17 @@
 }
 
 .button-projectInfo {
-    background: #1d1d1d !important;
+    background: rgba(255, 255, 255, 0.2) !important;
     border: 2px solid #fff !important;
     font-size: 1.1em !important;
     width: 55vw;
     height: 5vh;
+}
+
+.button-projectInfo:hover {
+    background: #437DBF !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
 }
 
 @media (min-width: 768px) {
@@ -36,7 +44,8 @@
         margin: 50px 0;
         background-image: url(../assets/bg2.jpg);
         background-size: cover;
-        min-height: 220px;
+        width: 100%;
+        min-height: 28vh;
         position: relative;
     }
     
@@ -58,10 +67,16 @@
     }
     
     .button-projectInfo {
-        background: #1d1d1d !important;
+        background: rgba(255, 255, 255, 0.2) !important;
         border: 2px solid #fff !important;
         font-size: 1.1em !important;
         width: 250px;
         height: 40px;
+    }
+
+    .button-projectInfo:hover {
+        background: #437DBF !important;
+        color: #000 !important;
+        border: 2px solid #000 !important;
     }
 }
