@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function ProjectCard({ imgProject, title, cardText }) {
+function ProjectCardMobile({ imgProject, title, cardText }) {
   return (
     <Card className="containerCardProject customCardProject">
       <Card.Img className="custom-img-project" variant="top" src={imgProject} />
@@ -14,4 +14,4 @@ function ProjectCard({ imgProject, title, cardText }) {
   );
 }
 
-export default ProjectCard;
+export default ProjectCardMobile;

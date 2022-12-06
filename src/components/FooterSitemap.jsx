@@ -15,6 +15,9 @@ function FooterSitemap() {
         <Col sm={4} md={4} lg={4}>
           <a href="#home">Serviços</a>
         </Col>
+      </Row>
+
+      <Row className="sitemap-footer-info">
         <Col sm={4} md={4} lg={4}>
           <a href="#home">Projetos</a>
         </Col>

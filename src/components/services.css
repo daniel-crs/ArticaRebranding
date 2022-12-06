@@ -69,12 +69,12 @@ h2, h3 {
         margin-bottom: 10px;
     }
     
-    hr {
+    .bottom-bar-service {
         height: 0.8vh;
         border: none;
         border-radius: 10px;
         background-color: #437DBF;
         width: 75vw;
-        margin: 0 auto !important;
+        margin: 0 auto;
     }
 }
