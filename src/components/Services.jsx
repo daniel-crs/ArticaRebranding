@@ -24,7 +24,7 @@ function Services() {
               <p className="container-services-info-size">
                 Desenvolvimento de aplicativos móveis para Android e iOS.
               </p>
-              <hr></hr>
+              <hr className="bottom-bar-service"></hr>
             </div>
 
             <div className="col-sm-12 col-lg-4 division-service">
@@ -36,7 +36,7 @@ function Services() {
                 Sites modernos e responsivos para lojas virtuais ou outros
                 projetos.
               </p>
-              <hr></hr>
+              <hr className="bottom-bar-service"></hr>
             </div>
 
             <div className="col-sm-12 col-lg-4">
@@ -47,7 +47,7 @@ function Services() {
               <p className="container-services-info-size">
                 Desenvolvemos logos e desgins para sites e aplicativos.
               </p>
-              <hr></hr>
+              <hr className="bottom-bar-service"></hr>
             </div>
           </div>
         </div>

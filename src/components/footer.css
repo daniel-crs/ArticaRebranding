@@ -22,8 +22,7 @@
 }
 
 .sitemap-footer-info {
-    width: 90vw;
-    border: 1px solid red;
+    width: 45vw;
 }
 
 .sitemap-footer-info a {
@@ -87,7 +86,6 @@
     }
     
     .sitemap-container {
-        width: 35vw;
         margin-right: 150px;
     }
     
@@ -97,6 +95,7 @@
     }
     
     .sitemap-footer-info a {
+        width: 45vw;
         color: #fff;
         text-decoration: none;
         font-size: 1.4em;
