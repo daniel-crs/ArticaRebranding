@@ -1,6 +1,6 @@
-import Cabecalho from "./components/Cabecalho";
+import Cabecalho from "./components/Navbar";
 import Showcase from "./components/Showcase";
-import Services from "./components/Services";
+import Service from "./components/Service";
 import Project from "./components/Project";
 import Working from "./components/Working";
 import Budget from "./components/Budget";
@@ -16,7 +16,7 @@ function App() {
     <div>
       <Cabecalho />
       <Showcase />
-      <Services />
+      <Service />
       <Project />
       <Working />
       <Budget />
