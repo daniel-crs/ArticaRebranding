@@ -3,26 +3,27 @@ nav {
 }
 
 #logo {
-    height: 60px;
-    width: 105px;
-    margin-left: 10px;
+    width: 120px;
+    padding-left: 10px;
 }
 
 #button-hamburguer {
     font-size: 1.6rem;
-    margin-right: 2vw;
+    margin-right: 15px;
 }
 
 .navbar-style-link {
-    color: #fff !important;
-    font-size: 1.4em !important;
-    margin-right: 1.6vw;
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 2px;
+    padding-left: 25px;
 }
 
 .navbar-style-link:hover {
-    color: #437DBF !important;
+    color: #437DBF;
 }
 
 #ativa {
-    color: #437DBF !important;
+    padding-top: 5px;
+    color: #437DBF;
 }
