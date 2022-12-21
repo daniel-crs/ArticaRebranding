@@ -32,7 +32,7 @@ function Project() {
       <ProjectInfo />
 
       {(() => {
-        if (windowSize.innerWidth < 650) {
+        if (windowSize.innerWidth < 768) {
           return <ProjectMobile />;
         } else {
           return <ProjectDesktop />;

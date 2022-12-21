@@ -1,42 +1,8 @@
-.swiper-pagination-bullet {
-	background: #fff !important;
-}
-
-.swiper-pagination-bullet-active {
-	background: #437DBF !important;
-}
-
-.containerCardProject {
-    margin: 0 auto;
-}
-
-.customCardProject {
-    background: #1D1D1D !important;
-    height: 56vh !important;
-    width: 80vw;
-}
-
-.custom-img-project {
-    height: 25vh;
-}
-
-.custom-Card-project {
-    font-size: 1.5em !important;
-    color: #437DBF;
-}
-
-.custom-Card-project-text {
-    color: #fff;
-    width: 72vw;
-    height: 12.5vh;
-    font-size: 16px;
-}
-
 .button-project {
-    margin: 10px 0 0 60px;
-    width: 45vw;
-    height: 5vh;
-    font-size: 1.1em;
+    width: 220px !important;
+    height: 50px !important;
+    padding: 8px 0 !important;
+    font-size: 16px;
     background: rgba(255, 255, 255, 0.1) !important;
     border: 2px solid #fff !important;
     border-radius: 10px;
@@ -48,7 +14,42 @@
     border: 2px solid #000 !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 320px) {
+    .swiper-pagination-bullet {
+        background: #fff !important;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: #437DBF !important;
+    }
+
+    .containerCardProject {
+        margin: 0 auto;
+    }    
+    
+    .customCardProject {
+        background: #1D1D1D !important;
+        width: 80vw;
+        height: 520px !important;
+    }
+    
+    .custom-img-project {
+        height: 225px;
+    }
+    
+    .custom-Card-project {
+        font-size: 1.5em !important;
+        color: #437DBF;
+    }
+    
+    .custom-Card-project-text {
+        color: #fff;
+        width: 72vw;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1024px) {
     #space-between-project-cards {
         margin: 50px 0;
     }
@@ -71,20 +72,5 @@
         height: 26vh;
         font-size: 1.6em;
     }
-
-    .button-project {
-        margin: 0 auto;
-        width: 15vw;
-        height: 7vh;
-        font-size: 1.4em;
-        background: rgba(255, 255, 255, 0.1) !important;
-        border: 2px solid #fff !important;
-        border-radius: 10px;
-    }
-    
-    .button-project:hover {
-        background: #437DBF !important;
-        color: #000 !important;
-        border: 2px solid #000 !important;
-    }
 }
+

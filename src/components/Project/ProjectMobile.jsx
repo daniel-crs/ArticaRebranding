@@ -20,7 +20,6 @@ function ProjectMobile() {
       }}
       modules={[Pagination, Navigation]}
       loop
-      className="mySwiper"
     >
       <SwiperSlide>
         <ProjectCardMobile

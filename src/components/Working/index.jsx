@@ -39,7 +39,6 @@ function Working() {
         }}
         modules={[Pagination, Navigation]}
         loop
-        className="mySwiper"
       >
         <SwiperSlide>
           <WorkingCard
