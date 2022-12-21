@@ -22,32 +22,34 @@ function Cabecalho() {
           <navbar-nav>
             <Nav>
               <nav-item>
-                <Nav.Link className="navbar-style-link" id="ativa" href="#home">
-                  Home
+                <Nav.Link href="#home">
+                  <p className="navbar-style-link" id="ativa">
+                    Home
+                  </p>
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
-                <Nav.Link className="navbar-style-link" href="#Sobre Nós">
-                  Sobre Nós
+                <Nav.Link href="#Sobre Nós">
+                  <p className="navbar-style-link">Sobre Nós</p>
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
-                <Nav.Link className="navbar-style-link" href="#Serviços">
-                  Serviços
+                <Nav.Link href="#Serviços">
+                  <p className="navbar-style-link">Serviços</p>
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
-                <Nav.Link className="navbar-style-link" href="#Projetos">
-                  Projetos
+                <Nav.Link href="#Projetos">
+                  <p className="navbar-style-link">Projetos</p>
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
-                <Nav.Link className="navbar-style-link" href="#Contatos">
-                  Contatos
+                <Nav.Link href="#Contatos">
+                  <p className="navbar-style-link">Contatos</p>
                 </Nav.Link>
               </nav-item>
             </Nav>
