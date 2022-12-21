@@ -27,3 +27,14 @@ nav {
     padding-top: 5px;
     color: #437DBF;
 }
+
+@media (min-width: 1024px) {
+    .navbar-style-link {
+        font-size: 1.5em;
+        padding-left: 50px;
+    }
+    
+    #ativa {
+        padding-top: 0px;
+    }
+}
