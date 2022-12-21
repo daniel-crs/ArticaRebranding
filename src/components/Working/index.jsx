@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import CustomCard from "./WorkingCard";
+import WorkingCard from "./Card";
 import Container from "react-bootstrap/Container";
 
 function Working() {
@@ -39,45 +39,44 @@ function Working() {
         }}
         modules={[Pagination, Navigation]}
         loop
-        className="mySwiper"
       >
         <SwiperSlide>
-          <CustomCard
+          <WorkingCard
             title="01"
             subtitle="Reuniões"
             cardText="Vamos realizar reuniões para entender os objetivos e funcionalidades que você deseja que tenha no seu projeto. Desta forma poderemos estipilar o valor do projeto precisar baseada no tempo para implementar."
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard
+          <WorkingCard
             title="02"
             subtitle="Orçamento"
             cardText="Após a primeira reunião, nos iremos calcular seu orçamento baseado nas funcionalidades que deveram estar presentes no seu projeto."
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard
+          <WorkingCard
             title="03"
             subtitle="Prototipo "
             cardText="Baseado nas reuniões, nesta etapa faremos protótipos do seu projeto para validar o design com você antes de desenvolver. "
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard
+          <WorkingCard
             title="04"
             subtitle="Sub-title"
             cardText="Ainda por vir o texto"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard
+          <WorkingCard
             title="05"
             subtitle="Sub-title"
             cardText="Ainda por vir o texto"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CustomCard
+          <WorkingCard
             title="06"
             subtitle="Sub-title"
             cardText="Ainda por vir o texto"

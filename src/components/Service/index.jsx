@@ -5,7 +5,7 @@ import { BsLaptop } from "react-icons/bs";
 import { MdDesignServices } from "react-icons/md";
 import { Container } from "react-bootstrap";
 
-function Services() {
+function Service() {
   return (
     <Container fluid>
       <section id="service-division">
@@ -56,4 +56,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Service;

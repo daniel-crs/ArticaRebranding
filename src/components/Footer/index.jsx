@@ -1,7 +1,8 @@
 import "./footer.css";
 
-import FooterArtica from "./FooterArtica";
-import FooterSitemap from "./FooterSitemap";
+import ArticaInfo from "./ArticaInfo";
+import Sitemap from "./Sitemap";
+
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -15,10 +16,10 @@ function Footer() {
       <Container>
         <Row className="flex-container">
           <Col sm={12} lg={6}>
-            <FooterArtica />
+            <ArticaInfo />
           </Col>
           <Col sm={12} lg={6}>
-            <FooterSitemap />
+            <Sitemap />
           </Col>
         </Row>
 

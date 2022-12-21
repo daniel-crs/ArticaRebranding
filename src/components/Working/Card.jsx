@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 
-function CustomCard({ title, subtitle, cardText }) {
+function WorkingCard({ title, subtitle, cardText }) {
   return (
     <Card className="containerCard customCard">
       <Card.Body>
@@ -14,4 +14,4 @@ function CustomCard({ title, subtitle, cardText }) {
   );
 }
 
-export default CustomCard;
+export default WorkingCard;

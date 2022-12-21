@@ -10,7 +10,7 @@
 
 .bg-budget::before {
     content: "";
-    background-image: url(../assets/img-1.jpg);
+    background-image: url(../../assets/img-1.jpg);
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -65,7 +65,7 @@
     
     .bg-budget::before {
         content: "";
-        background-image: url(../assets/img-1.jpg);
+        background-image: url(../../assets/img-1.jpg);
         background-size: cover;
         position: absolute;
         top: 0px;

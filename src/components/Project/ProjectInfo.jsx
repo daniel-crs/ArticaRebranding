@@ -15,7 +15,7 @@ function ProjectInfo() {
               curiosidade.
             </p>
           </div>
-          <Button className="button-projectInfo">Todos nossos projetos</Button>
+          <Button className="button-project">Todos nossos projetos</Button>
         </div>
       </Container>
     </section>

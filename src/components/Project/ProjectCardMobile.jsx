@@ -5,10 +5,12 @@ function ProjectCardMobile({ imgProject, title, cardText }) {
   return (
     <Card className="containerCardProject customCardProject">
       <Card.Img className="custom-img-project" variant="top" src={imgProject} />
-      <Card.Body>
+      <Card.Body className="pb-5">
         <Card.Title className="custom-Card-project">{title}</Card.Title>
         <Card.Text className="custom-Card-project-text">{cardText}</Card.Text>
-        <Button className="button-project">Ver projeto</Button>
+        <div className="row justify-content-center">
+          <Button className="button-project">Ver projeto</Button>
+        </div>
       </Card.Body>
     </Card>
   );

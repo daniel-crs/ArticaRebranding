@@ -1,7 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function FooterSitemap() {
+function Sitemap() {
   return (
     <div className="sitemap-container">
       <h2 className="sitemap-footer-title">Sitemap</h2>
@@ -29,4 +29,4 @@ function FooterSitemap() {
   );
 }
 
-export default FooterSitemap;
+export default Sitemap;

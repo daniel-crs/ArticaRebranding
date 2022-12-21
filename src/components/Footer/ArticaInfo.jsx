@@ -1,4 +1,4 @@
-function FooterArtica() {
+function ArticaInfo() {
   return (
     <div className="artica-container">
       <h2 className="artica-footer-title">Artica</h2>
@@ -11,4 +11,4 @@ function FooterArtica() {
   );
 }
 
-export default FooterArtica;
+export default ArticaInfo;

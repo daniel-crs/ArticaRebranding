@@ -1,7 +1,7 @@
 import "./doubts.css";
 
 import { Container } from "react-bootstrap";
-import DoubtsCard from "./DoubtsCard";
+import DoubtsCard from "./Card";
 
 function Doubts() {
   return (
