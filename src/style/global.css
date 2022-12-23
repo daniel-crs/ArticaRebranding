@@ -10,14 +10,42 @@ body {
 }
 
 h2 {
-    font-size: 1.7em;
+    color: #fff;
 }
 
 h3 {
-    font-size: 1.5em;
+    color: #437DBF;
 }
 
 p {
-    font-size: 1em;
     color: #fff;
+}
+
+@media (min-width: 320px) {
+    h2 {
+        font-size: 1.7em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        color: #fff;
+    }
+}
+
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 2.1em;
+    }
+    
+    h3 {
+        font-size: 1.8em;
+    }
+    
+    p {
+        font-size: 1.2em;
+        color: #fff;
+    }
 }
