@@ -13,7 +13,7 @@ function ProjectMobile() {
         clickable: true,
       }}
       breakpoints={{
-        640: {
+        768: {
           slidesPerView: 1,
           spaceBetween: 20,
         },

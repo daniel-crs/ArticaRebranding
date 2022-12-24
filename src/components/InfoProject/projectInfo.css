@@ -1,0 +1,32 @@
+.bg-projectInfo {
+    background-image: url(../../assets/bg2.jpg);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.container-projectInfo {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.text-projectInfo {
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 320px) {
+    .text-projectInfo {
+        width: 320px;
+    }
+}
+
+@media (min-width: 1024px) {    
+    .text-projectInfo {
+        width: 500px;
+    }
+}
