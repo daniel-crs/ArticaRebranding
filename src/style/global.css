@@ -10,7 +10,7 @@ body {
 }
 
 h2 {
-    color: #fff;
+    color: #437DBF;
 }
 
 h3 {
@@ -31,7 +31,7 @@ p {
     }
     
     p {
-        color: #fff;
+        font-size: 1em;
     }
 }
 
@@ -46,6 +46,5 @@ p {
     
     p {
         font-size: 1.2em;
-        color: #fff;
     }
 }

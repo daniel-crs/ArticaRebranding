@@ -1,6 +1,5 @@
 import "./project.css";
 
-import ProjectInfo from "./ProjectInfo";
 import ProjectMobile from "./ProjectMobile";
 import ProjectDesktop from "./ProjectDesktop";
 
@@ -29,8 +28,6 @@ function Project() {
 
   return (
     <Container>
-      <ProjectInfo />
-
       {(() => {
         if (windowSize.innerWidth < 768) {
           return <ProjectMobile />;
