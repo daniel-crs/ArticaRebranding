@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 
 function Service() {
   return (
-    <Container fluid>
+    <Container>
       <section id="service-division">
         <div className="justify-content-center">
           <h2 className="custom-card-service">Serviços</h2>

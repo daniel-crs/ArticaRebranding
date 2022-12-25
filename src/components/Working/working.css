@@ -1,103 +1,124 @@
-.how_we_work {
+.Custom-working-title {
     color: white;
     margin-top: 50px;
 }
 
-.how_we_work_hr {
-    height: 0.8vh;
+.Custom-working-cross-bar {
     border: none;
     border-radius: 10px;
     background-color: #437DBF;
-    width: 30vw;
-    margin: 0 auto !important;
+    margin: 0 auto;
 }
 
-.containerCard {
+.space-between-components {
     margin-top: 30px;
 }
 
-.customCard {
-    background: #1D1D1D !important;
+.container-Card {
+    background: #1D1D1D;
     border-radius: 10px;
-    height: 40vh !important;
-    width: 100%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 25px;
 }
 
-.custom-Card-subtitle {
-    font-size: 1.5em !important;
+.custom-number {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.custom-subtitle {
     color: #437DBF;
     padding-top: 5px;
 }
 
-.custom-Card-text {
-    padding-top: 5px;
-    width: 24vw;
-    height: 25vh;
-}
-
-.number-color {
-    color: #fff;
-    font-size: 1.3em !important;
-}
 
 .swiper-pagination-bullet {
-    background: #fff !important;
+    background: #fff;
 }
 
 .swiper-pagination-bullet-active {
-    background: #437DBF !important;
+    background: #437DBF;
 }
 
-@media (max-width: 768px) {
-    .how_we_work {
-    color: white;
-    margin-top: 50px;
-    }
-
-    .how_we_work_hr {
-        height: 0.8vh;
-        border: none;
-        border-radius: 10px;
-        background-color: #437DBF;
-        width: 75vw;
-        margin: 0 auto !important;
-    }
-
-    .containerCard {
-        margin: 0 auto;
-        margin-top: 30px;
-    }
-
-    .customCard {
-        background: #1D1D1D !important;
-        border-radius: 10px;
-        height: 30vh !important;
-        width: 90%;
-    }
-
-    .custom-Card-subtitle {
-        font-size: 1.5em !important;
-        color: #437DBF;
-        padding-top: 5px;
-    }
-
-    .custom-Card-text {
-        padding-top: 5px;
-        width: 77vw;
-        height: 19vh;
-    }
-
-    .number-color {
-        color: #fff;
-        font-size: 1.3em !important;
-    }
-
-    .swiper-pagination-bullet {
-        background: #fff !important;
+@media (min-width: 320px) { 
+    .Custom-working-title {
+        font-size: 1.6em;
     }
     
-    .swiper-pagination-bullet-active {
-        background: #437DBF !important;
+    .Custom-working-cross-bar {
+        width: 285px;
+        height: 5px;
+    }
+    
+    .container-Card {
+        width: 285px;
+        padding-bottom: 15px;
     }
 
+    .custom-text {
+        width: 260px;
+        font-size: 0.95em;
+    }
+}
+
+@media (min-width: 380px) {    
+    .Custom-working-title {
+        font-size: 1.7em;
+    }
+    
+    .Custom-working-cross-bar {
+        width: 300px;
+        height: 5px;
+    }
+    
+    .container-Card {
+        width: 350px;
+    }
+
+    .custom-text {
+        width: 325px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-Card {
+        width: 100%;
+    }
+
+    .custom-text {
+        width: 95%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Custom-working-title {
+        font-size: 2.1em;
+    }
+    
+    .Custom-working-cross-bar {
+        width: 400px;
+        height: 8px; 
+    }
+    
+    .container-Card {
+        width: 100%;
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+
+    .custom-text {
+        width: 95%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container-Card {
+        width: 100%;
+    }
+
+    .custom-text {
+        width: 95%;
+    }
 }
