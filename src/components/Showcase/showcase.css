@@ -32,6 +32,23 @@
     }
     
     #layout-info {
+        width: 285px;
+        font-size: 1.1em;
+        margin-top: 1px;
+    }
+}
+
+@media (min-width: 380px) {
+    #container-showcase {
+        padding-top: 25vh;
+        margin-left: 10px;
+    }
+    
+    .masthead h1 {
+        font-size: 1.6em;
+    }
+    
+    #layout-info {
         width: 350px;
         font-size: 1.1em;
         margin-top: 1px;

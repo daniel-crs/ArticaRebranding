@@ -1,5 +1,8 @@
 import "./working.css";
 
+import WorkingCard from "./Card";
+import Info from "./InfoCard";
+
 // core version + navigation, pagination modules:
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,31 +11,29 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import WorkingCard from "./Card";
 import Container from "react-bootstrap/Container";
 
 function Working() {
   return (
     <Container>
-      <h2 className="how_we_work">Como Trabalhamos</h2>
-      <hr className="how_we_work_hr"></hr>
+      <Info />
 
       <Swiper
         slidesPerView={1}
-        spaceBetween={10}
+        spaceBetween={0}
         pagination={{
           clickable: true,
         }}
         breakpoints={{
-          640: {
+          320: {
             slidesPerView: 1,
             spaceBetween: 20,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
-          1024: {
+          1440: {
             slidesPerView: 3,
             spaceBetween: 25,
           },
