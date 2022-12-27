@@ -1,7 +1,6 @@
 .bg-budget {
     margin: 50px 0;
-    position: relative; 
-    height: 26vh;
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -17,7 +16,7 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.3;
+    opacity: 0.15;
 }
 
 .container-budget {
@@ -26,84 +25,92 @@
 
 .container-budget h2 {
     position: relative;
-    color: #437DBF !important;
-    color: #fff;
+    color: #437DBF;
 }
 
 .text-budget {
     position: relative;
-    width: 85vw;
-    margin-top: 0.5em;
-    margin-bottom: 1.3em;
 }
 
 .button-budget {
-    position: relative;
     background: rgba(255, 255, 255, 0.2) !important;
     border: 2px solid #fff !important;
-    font-size: 1.1em !important;
-    width: 55vw;
-    height: 5vh;
+    position: relative;
 }
 
 .button-budget:hover {
-    background: #437DBF !important;
-    color: #000 !important;
-    border: 2px solid #000 !important;
+    background: #437DBF;
+    color: #000;
+    border: none;
 }
 
-@media (min-width: 768px) {
-    .bg-budget {
-        margin: 50px 0;
-        position: relative; 
-        height: 35vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .bg-budget::before {
-        content: "";
-        background-image: url(../../assets/img-1.jpg);
-        background-size: cover;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        opacity: 0.3;
-    }
-    
-    .container-budget {
-        text-align: center;
-    }
-    
+@media (min-width: 320px) {
     .container-budget h2 {
-        margin-top: -30px;
-        color: #437DBF !important;
-        padding-top: 20px;
-        color: #fff;
+        font-size: 1.5em;
+        margin-top: 25px;
     }
     
     .text-budget {
-        width: 30vw;
-        margin: 0 auto;
-        margin-top: 8px;
-        margin-bottom: 20px;
-    }
-    
-    .button-budget {
-        background: rgba(255, 255, 255, 0.2) !important;
-        border: 2px solid #fff !important;
-        font-size: 1.1em !important;
-        width: 250px;
-        height: 40px;
+        width: 285px;
     }
 
-    .button-budget:hover {
-        background: #437DBF !important;
-        color: #000 !important;
-        border: 2px solid #000 !important;
+    .button-budget {
+        width: 200px;
+        height: 40px;
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+}
+
+
+@media (min-width: 380px) {
+    .container-budget h2 {
+        font-size: 1.7em
+    }
+
+    .text-budget {
+        width: 350px;
+    }
+
+    .button-budget {
+        width: 225px;
+        height: 45px;
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-budget h2 {
+        font-size: 1.7em
+    }
+
+    .text-budget {
+        width: 400px;
+    }
+
+    .button-budget {
+        width: 250px;
+        height: 45px;
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-budget h2 {
+        font-size: 2.1em
+    }
+
+    .text-budget {
+        width: 400px;
+    }
+
+    .button-budget {
+        width: 250px;
+        height: 45px;
+        font-size: 1.2em;
+    }
+
+    .bg-budget {
+        height: 30vh;
     }
 }
