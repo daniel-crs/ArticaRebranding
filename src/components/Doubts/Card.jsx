@@ -6,7 +6,7 @@ function DoubtsCard({ question, answer }) {
     <Accordion className="space-between-doubts-cards">
       <Accordion.Item className="doubts-accordion-principal" eventKey="0">
         <Accordion.Header>
-          <FiPlus className="plus-icon" />{" "}
+          <FiPlus className="plus-icon" />
           <p className="doubts-card-question">{question}</p>
         </Accordion.Header>
         <Accordion.Body className="doubts-accordion-conteudo">

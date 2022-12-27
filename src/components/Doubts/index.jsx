@@ -9,7 +9,7 @@ function Doubts() {
       <div>
         <h2 className="doubts-title">Ainda tem duvidas ?</h2>
         <p className="doubts-text">
-          vai algumas dúvidas frequentes que nossos clientes tem.
+          Aqui vai algumas dúvidas frequentes que nossos clientes tem.
         </p>
       </div>
 

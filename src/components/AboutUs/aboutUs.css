@@ -2,16 +2,26 @@
     text-align: left;
 }
 
-.about-us-text {
-    width: 95vw;
+@media (min-width: 320px) {
+    .about-us-text {
+        width: 105%;
+    }
+}
+
+@media (min-width: 380px) {
+    .about-us-text {
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
-    .about-us-title {
-        text-align: left;
-    }
-    
     .about-us-text {
-        width: 45vw;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .about-us-text {
+        width: 75%;
     }
 }
