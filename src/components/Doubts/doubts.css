@@ -3,38 +3,33 @@
     margin-top: 50px;
 }
 
-.doubts-text {
-    width: 80vw;
-}
-
 .space-between-doubts-cards {
     margin-bottom: 10px;
 }
 
 .doubts-card-question {
-    font-size: 1em;
     margin: 0 auto;
-    width: 90vw;
 }
 
 .doubts-card-answer {
-    font-size: 0.9em;
-    margin: 0 auto;
-    width: 85vw;
+    margin-bottom: -10px;
+}
+
+.plus-icon {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px 0 -25px;
 }
 
 .plus-icon {
     color: #437DBF;
-    height: 45px;
-    width: 45px;
-    margin: 0 5px 0 -25px;
 }
 
 .accordion-button {
     background-color: #141414 !important;
     color: #fff !important;
-    height: 6vh;
     margin-bottom: -5px;
+    height: 55px;
     border: none;
     box-shadow: none;
 }
@@ -57,94 +52,61 @@
     border: none;
 }
 
- .accordion-item {
+.accordion-item {
     background-color: #141414 !important;
     border: none !important;
-    width: 90vw;
+    width: 100%;
+    width: 100%; 
 }
 
 .bottom-bar-doubts-cards {
-    height: 0.6vh;
     border-radius: 10px;
     background-color: #fff;
-    width: 90vw;
+    width: 100%;
+    height: 5px;
     margin-top: 5px;
 }
 
-@media (min-width: 768px) {
-
-    .doubts-title {
-        text-align: left;
-    }
-    
+@media (min-width: 320px) {
     .doubts-text {
-        width: 45vw;
-    }
-
-    .space-between-doubts-cards {
-        margin-bottom: 10px;
+        width: 300px;
     }
     
     .doubts-card-question {
-        font-size: 1.4em;
-        margin: 0 auto;
+        width: 105%;
+        padding-bottom: 5px;
+    }
+    
+    .doubts-card-answer {
+        width: 105%;
+    }
+}
+
+@media (min-width: 380px) {
+    .doubts-text {
+        width: 300px;
+    }
+    
+    .doubts-card-question {
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    
+    .doubts-card-answer {
+        width: 105%;
+    }
+}
+
+@media (min-width: 768px) {
+    .doubts-text {
+        width: 400px;
+    }
+    
+    .doubts-card-question {
+        width: 100%;
     }
 
     .doubts-card-answer {
-        font-size: 1.2em;
-        margin: 0 auto;
-        width: 78.5vw;
-    }
-
-    .plus-icon {
-        color: #437DBF;
-        height: 45px;
-        width: 45px;
-        margin-left: -20px;
-    }
-
-    .accordion-button {
-        background-color: #141414 !important;
-        color: #fff !important;
-        height: 6vh;
-        border: none;
-        box-shadow: none;
-    }
-
-    .accordion-button:hover {
-        color: #437DBF !important;
-    }
-
-    .accordion-button:after {
-        background-image: none !important;
-    }
-    
-    .accordion-button:not(.collapsed) {
-        box-shadow: none;
-    }
-
-    .accordion-button:focus {
-        box-shadow: none;
-    }
-
-    .accordion-body {
-        background-color: #141414 !important;
-        color: #fff !important;
-        box-shadow: none;
-    }
-
-    .accordion-item {
-        background-color: #141414 !important;
-        border: none !important;
-        width: 80vw;
-        margin-bottom: -10px;
-    }
-
-    .bottom-bar-doubts-cards {
-        height: 0.8vh;
-        border-radius: 10px;
-        background-color: #fff;
-        width: 80vw;
-        margin-top: 10px;
+        width: 100%;
     }
 }
