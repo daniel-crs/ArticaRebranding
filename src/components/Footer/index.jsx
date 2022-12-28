@@ -14,7 +14,7 @@ function Footer() {
   return (
     <section className="footer-bg">
       <Container>
-        <Row className="flex-container">
+        <Row>
           <Col sm={12} lg={6}>
             <ArticaInfo />
           </Col>
@@ -25,15 +25,21 @@ function Footer() {
 
         <div className="icon-container">
           <div>
-            <BsWhatsapp className="icon-logo whatsapp" />
+            <a href="#home">
+              <BsWhatsapp className="icon-logo whatsapp" />
+            </a>
           </div>
 
           <div>
-            <BsLinkedin className="icon-logo linkedin" />
+            <a href="#home">
+              <BsLinkedin className="icon-logo linkedin" />
+            </a>
           </div>
 
           <div>
-            <CgMail className="icon-logo gmail" />
+            <a href="#home">
+              <CgMail className="icon-logo gmail" />
+            </a>
           </div>
         </div>
 

@@ -3,28 +3,44 @@ import Col from "react-bootstrap/Col";
 
 function Sitemap() {
   return (
-    <div className="sitemap-container">
-      <h2 className="sitemap-footer-title">Sitemap</h2>
-      <Row className="sitemap-footer-info">
-        <Col sm={4} md={4} lg={4}>
-          <a href="#home">Home</a>
-        </Col>
-        <Col sm={4} md={4} lg={4}>
-          <a href="#home">Sobre Nós</a>
-        </Col>
-        <Col sm={4} md={4} lg={4}>
-          <a href="#home">Serviços</a>
-        </Col>
-      </Row>
+    <div>
+      <div className="sitemap-footer-title">
+        <h2>Sitemap</h2>
+        <hr />
+      </div>
 
-      <Row className="sitemap-footer-info">
-        <Col sm={4} md={4} lg={4}>
-          <a href="#home">Projetos</a>
-        </Col>
-        <Col sm={4} md={4} lg={4}>
-          <a href="#home">Contatos</a>
-        </Col>
-      </Row>
+      <div className="container-footer-info">
+        <Row>
+          <Col sm={4} lg={4}>
+            <a id="ativa" className="sitemap-footer-info" href="#home">
+              Home
+            </a>
+          </Col>
+          <Col sm={4} lg={4}>
+            <a className="sitemap-footer-info" href="#home">
+              Sobre Nós
+            </a>
+          </Col>
+          <Col sm={4} lg={4}>
+            <a className="sitemap-footer-info" href="#home">
+              Serviços
+            </a>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col sm={4} lg={4}>
+            <a className="sitemap-footer-info" href="#home">
+              Projetos
+            </a>
+          </Col>
+          <Col sm={4} lg={4}>
+            <a className="sitemap-footer-info" href="#home">
+              Contatos
+            </a>
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 function ArticaInfo() {
   return (
-    <div className="artica-container">
+    <div>
       <h2 className="artica-footer-title">Artica</h2>
       <div className="artica-footer-info">
         <p>artica-dev@gmail.com</p>
