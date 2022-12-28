@@ -39,9 +39,9 @@
 }
 
 .button-budget:hover {
-    background: #437DBF;
-    color: #000;
-    border: none;
+    background: #437DBF !important;
+    color: #000 !important;
+    border: none !important;
 }
 
 @media (min-width: 320px) {

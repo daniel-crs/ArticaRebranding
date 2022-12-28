@@ -9,38 +9,38 @@
 }
 
 .artica-footer-info {
-    margin-left: 25px;
+    padding-left: 25px;
 }
 
-.sitemap-container {
-    width: 30vw;
-}
-
-.sitemap-footer-title {
-    margin-top: 25px;
-    text-align: left;
+.sitemap-footer-title hr {
+    height: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #fff;
 }
 
 .sitemap-footer-info {
-    width: 45vw;
-}
-
-.sitemap-footer-info a {
     color: #fff;
     text-decoration: none;
 }
 
-.icon-container {
-    margin: 50px 0 25px 0;
-    display: flex;
-    justify-content: center;
+.sitemap-footer-info:hover {
+    color: #437DBF;
+    text-decoration: none;
 }
 
+#ativa {
+    color: #437DBF;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+}   
+
 .icon-logo {
-    height: 60px;
-    width: 60px;
     color: #fff;
-    margin: 0 25px;
 }
 
 .whatsapp {
@@ -64,76 +64,129 @@
     padding-bottom: 50px;
 }
 
+@media (min-width: 320px) {
+    .sitemap-footer-title h2 {
+        margin-top: 25px;
+    }
+
+    .sitemap-footer-title hr {
+        width: 80%;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+    
+    .icon-container {
+        margin: 50px 0 25px 0;
+    }
+    
+    .icon-logo {
+        height: 45px;
+        width: 45px;
+        margin: 0 25px;
+    }
+}
+
+@media (min-width: 380px) {
+    .sitemap-footer-title h2 {
+        margin-top: 25px;
+    }
+
+    .sitemap-footer-title hr {
+        width: 80%;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+    
+    .icon-container {
+        margin: 50px 0 25px 0;
+    }
+    
+    .icon-logo {
+        height: 50px;
+        width: 50px;
+        margin: 0 25px;
+    }    
+}
+
 @media (min-width: 768px) {
-    .footer-bg {
-        background: #1D1D1D;
+    .sitemap-footer-title h2 {
         margin-top: 50px;
     }
 
-    .artica-container {
-        margin-left: 50px;
-        width: 30vw;
+    .sitemap-footer-title hr {
+        width: 85%;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .container-footer-info {
+        width: 60%;
     }
     
-    .artica-footer-title {
-        margin-top: 50px;
-        text-align: left;
-    }
-    
-    .artica-footer-info {
-        margin-left: 25px;
-        font-size: 1.4em;
-    }
-    
-    .sitemap-container {
-        margin-right: 150px;
-    }
-    
-    .sitemap-footer-title {
-        margin-top: 50px;
-        text-align: left;
-    }
-    
-    .sitemap-footer-info a {
-        width: 45vw;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.4em;
+    .sitemap-footer-info {
+        font-size: 1.2em;
         margin-left: 25px;
     }
 
     .icon-container {
         margin: 50px 0 30px 0;
-        display: flex;
-        justify-content: center;
     }
     
     .icon-logo {
-        height: 80px;
-        width: 80px;
-        color: #fff;
+        height: 60px;
+        width: 60px;
         margin: 0 50px;
     }
-    
-    .whatsapp {
-        color: #7AD06D;
-    }
-    
-    .linkedin {
-        color: #0077B7;
-    }
-    
-    .gmail {
-        background-color: #FF0000;
-        border: 2px solid #FF0000;
-        color: #000;
-        border-radius: 100%;
+}
+
+@media (min-width: 414px) {
+    .sitemap-footer-title h2 {
+        margin-top: 25px;
     }
 
-    .copyright-footer {
-        color: #fff;
-        font-size: 1.4em;
-        text-align: center;
-        padding-bottom: 50px;
+    .sitemap-footer-title hr {
+        width: 80%;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+    
+    .icon-container {
+        margin: 50px 0 25px 0;
+    }
+    
+    .icon-logo {
+        height: 60px;
+        width: 60px;
+        margin: 0 25px;
+    }    
+}
+
+@media (min-width: 1024px) {
+    .sitemap-footer-title h2 {
+        margin-top: 50px;
+    }
+
+    .sitemap-footer-title hr {
+        width: 90%;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .container-footer-info {
+        width: 100%;
+    }
+    
+    .sitemap-footer-info {
+        margin-left: 25px;
+    }
+
+    .icon-container {
+        margin: 50px 0 30px 0;
+    }
+    
+    .icon-logo {
+        height: 70px;
+        width: 70px;
+        margin: 0 50px;
     }
 }
