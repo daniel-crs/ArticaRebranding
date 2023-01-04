@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -12,32 +14,30 @@ function Sitemap() {
       <div className="container-footer-info">
         <Row>
           <Col sm={4} lg={4}>
-            <a id="ativa" className="sitemap-footer-info" href="#home">
-              Home
-            </a>
+            <Link to="/">
+              <p id="ativa" className="sitemap-footer-info">
+                Home
+              </p>
+            </Link>
           </Col>
           <Col sm={4} lg={4}>
-            <a className="sitemap-footer-info" href="#home">
-              Sobre Nós
-            </a>
+            <p className="sitemap-footer-info">Sobre Nós</p>
           </Col>
           <Col sm={4} lg={4}>
-            <a className="sitemap-footer-info" href="#home">
-              Serviços
-            </a>
+            <p className="sitemap-footer-info">Serviços</p>
           </Col>
         </Row>
 
         <Row>
           <Col sm={4} lg={4}>
-            <a className="sitemap-footer-info" href="#home">
-              Projetos
-            </a>
+            <Link to={"/AllProjects"}>
+              <p className="sitemap-footer-info">Projetos</p>
+            </Link>
           </Col>
           <Col sm={4} lg={4}>
-            <a className="sitemap-footer-info" href="#home">
-              Contatos
-            </a>
+            <Link to="/Contact">
+              <p className="sitemap-footer-info">Contatos</p>
+            </Link>
           </Col>
         </Row>
       </div>

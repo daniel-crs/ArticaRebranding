@@ -1,31 +1,18 @@
-import Cabecalho from "./components/Navbar";
-import Showcase from "./components/Showcase";
-import Service from "./components/Service";
-import InfoProject from "./components/InfoProject";
-import Project from "./components/Project";
-import Working from "./components/Working";
-import Budget from "./components/Budget";
-import AboutUs from "./components/AboutUs";
-import Doubts from "./components/Doubts";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./style/global.css";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import AllProjects from "./pages/AllProjects";
 
 function App() {
   return (
-    <div>
-      <Cabecalho />
-      <Showcase />
-      <Service />
-      <InfoProject />
-      <Project />
-      <Working />
-      <Budget />
-      <AboutUs />
-      <Doubts />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/AllProjects" element={<AllProjects />} />
+      </Routes>
+    </Router>
   );
 }
 

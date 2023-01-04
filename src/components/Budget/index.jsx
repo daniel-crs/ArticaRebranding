@@ -1,5 +1,7 @@
 import "./budget.css";
 
+import { Link } from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
@@ -13,7 +15,9 @@ function Budget() {
             Clique em fazer orçamento e conte o que você deseja realizar.
           </p>
         </div>
-        <Button className="button-budget">Fazer orçamento</Button>
+        <Link to={"/Contact"}>
+          <Button className="button-budget">Fazer orçamento</Button>
+        </Link>
       </div>
     </Container>
   );

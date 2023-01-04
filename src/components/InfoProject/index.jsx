@@ -1,5 +1,7 @@
 import "./projectInfo.css";
 
+import { Link } from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
@@ -13,7 +15,10 @@ function InfoProject() {
             Uma pequena seleção dos nossos projetos para matar sua curiosidade.
           </p>
         </div>
-        <Button className="button-project">Todos nossos projetos</Button>
+
+        <Link to={"AllProjects"}>
+          <Button className="button-project">Todos nossos projetos</Button>
+        </Link>
       </div>
     </Container>
   );
