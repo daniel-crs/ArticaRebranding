@@ -4,11 +4,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-function Cabecalho() {
+function Header() {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img src="../img/logo.svg" alt="Logo" id="logo" />
         </Navbar.Brand>
 
@@ -22,7 +22,7 @@ function Cabecalho() {
           <navbar-nav>
             <Nav>
               <nav-item>
-                <Nav.Link href="#home">
+                <Nav.Link href="/">
                   <p className="navbar-style-link" id="ativa">
                     Home
                   </p>
@@ -42,13 +42,13 @@ function Cabecalho() {
               </nav-item>
 
               <nav-item>
-                <Nav.Link href="#Projetos">
+                <Nav.Link href="/AllProjects">
                   <p className="navbar-style-link">Projetos</p>
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
-                <Nav.Link href="#Contatos">
+                <Nav.Link href="/Contact">
                   <p className="navbar-style-link">Contatos</p>
                 </Nav.Link>
               </nav-item>
@@ -60,4 +60,4 @@ function Cabecalho() {
   );
 }
 
-export default Cabecalho;
+export default Header;
