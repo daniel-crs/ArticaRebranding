@@ -1,0 +1,134 @@
+#info-forms {
+    margin-top: 50px;
+}
+
+#filter-button-space {
+    margin-top: -35px;
+    margin-bottom: 50px;
+}
+
+.space-between-cards {
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    #filter-button-space {
+        margin-top: 50px;
+    }
+
+    .containerCardProject {
+        margin: 0 auto;
+        background: #1D1D1D !important;
+        width: 350px;
+        height: 500px;
+    }
+    
+    .custom-img-project {
+        height: 225px;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .custom-Card-title h3 {
+        font-size: 1.3em;
+    }
+    
+    .custom-Card-project-text {
+        width: 320px;
+        height: 125px;
+    }
+
+    .button-project {
+        width: 220px !important;
+        padding: 8px 0 !important;
+    }
+}
+
+@media (min-width: 1020px) {
+    .containerCardProject {
+        margin: 0 auto;
+        background: #1D1D1D !important;
+        width: 450px;
+        height: 650px;
+    }
+    
+    .custom-img-project {
+        height: 300px;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .custom-Card-title h3 {
+        font-size: 1.5em;
+    }
+    
+    .custom-Card-project-text {
+        width: 415px;
+        height: 175px;
+        font-size: 1.1em;
+    }
+
+    .button-project {
+        width: 225px !important;
+        padding: 10px 0 !important;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerCardProject {
+        margin: 0 auto;
+        background: #1D1D1D !important;
+        width: 370px;
+        height: 600px;
+    }
+    
+    .custom-img-project {
+        height: 250px;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .custom-Card-title h3 {
+        font-size: 1.4em;
+    }
+    
+    .custom-Card-project-text {
+        width: 340px;
+        height: 180px;
+        font-size: 1em;
+    }
+
+    .button-project {
+        width: 225px !important;
+        padding: 10px 0 !important;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1400px) {
+    .containerCardProject {
+        margin: 0 auto;
+        background: #1D1D1D !important;
+        width: 425px;
+        height: 600px;
+    }
+    
+    .custom-img-project {
+        height: 250px;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .custom-Card-title h3 {
+        font-size: 1.5em;
+    }
+    
+    .custom-Card-project-text {
+        width: 400px;
+        height: 180px;
+        font-size: 1.1em;
+    }
+
+    .button-project {
+        width: 225px !important;
+        padding: 10px 0 !important;
+        font-size: 1.2em;
+    }
+}

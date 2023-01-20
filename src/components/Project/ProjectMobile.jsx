@@ -1,4 +1,4 @@
-import ProjectCardMobile from "./ProjectCardMobile";
+import ProjectCards from "./ProjectCards";
 
 // core version + navigation, pagination modules:
 import { Navigation, Pagination } from "swiper";
@@ -22,7 +22,7 @@ function ProjectMobile() {
       loop
     >
       <SwiperSlide>
-        <ProjectCardMobile
+        <ProjectCards
           imgProject="../../img/img-test-1.jpg"
           title="ClayPhone"
           cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
@@ -32,7 +32,7 @@ function ProjectMobile() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <ProjectCardMobile
+        <ProjectCards
           imgProject="../../img/img-test-5.png"
           title="Free Delivery"
           cardText="Um aplicativo especializado em deliveries dos mais variados produtos com muita
@@ -41,7 +41,7 @@ function ProjectMobile() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <ProjectCardMobile
+        <ProjectCards
           imgProject="../../img/img-test-4.webp"
           title="Pesto Itallian Food"
           cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
