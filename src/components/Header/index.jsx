@@ -1,10 +1,14 @@
 import "./navbar.css";
 
+import { useLocation } from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
+  const location = useLocation();
+
   return (
     <Navbar expand="lg">
       <Container fluid>
@@ -23,9 +27,17 @@ function Header() {
             <Nav>
               <nav-item>
                 <Nav.Link href="/">
-                  <p className="navbar-style-link" id="ativa">
-                    Home
-                  </p>
+                  {(() => {
+                    if (location.pathname === "/") {
+                      return (
+                        <p className="navbar-style-link" id="ativa">
+                          Home
+                        </p>
+                      );
+                    } else {
+                      return <p className="navbar-style-link">Home</p>;
+                    }
+                  })()}
                 </Nav.Link>
               </nav-item>
 
@@ -43,13 +55,33 @@ function Header() {
 
               <nav-item>
                 <Nav.Link href="/AllProjects">
-                  <p className="navbar-style-link">Projetos</p>
+                  {(() => {
+                    if (location.pathname === "/AllProjects") {
+                      return (
+                        <p className="navbar-style-link" id="ativa">
+                          Projetos
+                        </p>
+                      );
+                    } else {
+                      return <p className="navbar-style-link">Projetos</p>;
+                    }
+                  })()}
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
                 <Nav.Link href="/Contact">
-                  <p className="navbar-style-link">Contatos</p>
+                  {(() => {
+                    if (location.pathname === "/Contact") {
+                      return (
+                        <p className="navbar-style-link" id="ativa">
+                          Contatos
+                        </p>
+                      );
+                    } else {
+                      return <p className="navbar-style-link">Contatos</p>;
+                    }
+                  })()}
                 </Nav.Link>
               </nav-item>
             </Nav>

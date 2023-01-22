@@ -8,7 +8,6 @@ import Footer from "../../components/Footer";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 
 function Contact() {
   return (
@@ -16,19 +15,10 @@ function Contact() {
       <Header />
 
       <Container>
-        <Row>
-          <Col sm={12} md={6}>
-            <div id="info-forms">
-              <h2>Projetos</h2>
-              <p>Veja alguns de nossos projetos</p>
-            </div>
-          </Col>
-          <Col sm={12} md={6}>
-            <div id="filter-button-space">
-              <Button className="button-project">Ver projeto</Button>
-            </div>
-          </Col>
-        </Row>
+        <div id="info-forms">
+          <h2>Projetos</h2>
+          <p>Veja alguns de nossos projetos</p>
+        </div>
 
         <section>
           <Row>

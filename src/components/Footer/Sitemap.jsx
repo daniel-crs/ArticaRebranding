@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Sitemap() {
+  const location = useLocation();
+
   return (
     <div>
       <div className="sitemap-footer-title">
@@ -15,9 +18,17 @@ function Sitemap() {
         <Row>
           <Col sm={4} lg={4}>
             <Link to="/">
-              <p id="ativa" className="sitemap-footer-info">
-                Home
-              </p>
+              {(() => {
+                if (location.pathname === "/") {
+                  return (
+                    <p className="sitemap-footer-info" id="ativa">
+                      Home
+                    </p>
+                  );
+                } else {
+                  return <p className="sitemap-footer-info">Home</p>;
+                }
+              })()}
             </Link>
           </Col>
           <Col sm={4} lg={4}>
@@ -31,12 +42,32 @@ function Sitemap() {
         <Row>
           <Col sm={4} lg={4}>
             <Link to={"/AllProjects"}>
-              <p className="sitemap-footer-info">Projetos</p>
+              {(() => {
+                if (location.pathname === "/AllProjects") {
+                  return (
+                    <p className="sitemap-footer-info" id="ativa">
+                      Projetos
+                    </p>
+                  );
+                } else {
+                  return <p className="sitemap-footer-info">Projetos</p>;
+                }
+              })()}
             </Link>
           </Col>
           <Col sm={4} lg={4}>
             <Link to="/Contact">
-              <p className="sitemap-footer-info">Contatos</p>
+              {(() => {
+                if (location.pathname === "/Contact") {
+                  return (
+                    <p className="sitemap-footer-info" id="ativa">
+                      Contatos
+                    </p>
+                  );
+                } else {
+                  return <p className="sitemap-footer-info">Contatos</p>;
+                }
+              })()}
             </Link>
           </Col>
         </Row>
