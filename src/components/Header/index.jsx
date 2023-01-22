@@ -79,7 +79,9 @@ function Header() {
                         </p>
                       );
                     } else {
-                      return <p className="navbar-style-link">Contatos</p>;
+                      return (
+                        <p className="navbar-style-link left-sapce">Contatos</p>
+                      );
                     }
                   })()}
                 </Nav.Link>

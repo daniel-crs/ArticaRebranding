@@ -16,7 +16,10 @@ nav {
     color: #fff;
     font-size: 1.4em;
     margin-bottom: 2px;
-    padding-left: 25px;
+}
+
+.left-sapce {
+    margin-right: 25px;
 }
 
 .navbar-style-link:hover {

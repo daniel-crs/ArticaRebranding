@@ -1,0 +1,19 @@
+.imgCustom {
+    width: 100%;
+    height: 250px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+@media (min-width: 1024px) {
+    .imgCustom {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .imgCustom {
+        height: 400px;
+    }
+}

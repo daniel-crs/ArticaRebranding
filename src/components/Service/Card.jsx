@@ -28,7 +28,7 @@ function ServiceCards({ title, subtitle, cardText }) {
           </div>
           <h3 className="custom-card-service">Web Sites</h3>
           <p className="container-services-info-size">
-            Sites modernos e responsivos para lojas virtuais ou outros projetos.
+            Sites modernos e responsivos para lojas virtuais ou sites pessoais.
           </p>
           <hr className="bottom-bar-service"></hr>
         </Col>

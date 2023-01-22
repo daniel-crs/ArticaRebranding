@@ -1,0 +1,39 @@
+@media (min-width: 320px) {
+    .challengeTitle {
+        margin-top: 15px;
+    }
+
+    .challengeText {
+        width: 100%;
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 380px) {
+    .challengeText {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) {
+    .challengeText {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .challengeTitle {
+        font-size: 1.8em;
+    }
+
+    .challengeText {
+        width: 80%;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1440px) {
+    .challengeText {
+        width: 55%;
+    }
+}

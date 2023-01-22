@@ -74,6 +74,10 @@
         margin-top: -5px;
         margin-bottom: 10px;
     }
+
+    .container-footer-info {
+        width: 25%;
+    }
     
     .icon-container {
         margin: 50px 0 25px 0;

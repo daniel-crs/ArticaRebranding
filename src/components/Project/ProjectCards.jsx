@@ -1,7 +1,8 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
-function ProjectCards({ imgProject, title, cardText }) {
+function ProjectCards({ imgProject, title, cardText, linkText }) {
   return (
     <Card className="containerCardProject">
       <Card.Img className="custom-img-project" variant="top" src={imgProject} />
@@ -12,8 +13,10 @@ function ProjectCards({ imgProject, title, cardText }) {
         <Card.Text className="custom-Card-project-text">
           <p>{cardText}</p>
         </Card.Text>
-        <div className="row justify-content-center">
-          <Button className="button-project">Ver projeto</Button>
+        <div className="spaceProjectBtn">
+          <Link to={linkText}>
+            <Button className="button-project">Ver projetos</Button>
+          </Link>
         </div>
       </Card.Body>
     </Card>

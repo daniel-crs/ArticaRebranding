@@ -1,0 +1,41 @@
+.imgCustomMobile {
+    height: 250px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.mySwiper {
+    background: #141414 !important;
+}
+
+@media (min-width: 320px) {
+    .imgCustomMobile {
+        width: 300px;
+    }
+}
+
+@media (min-width: 375px) {
+    .imgCustomMobile {
+        width: 350px;
+    }
+}
+
+@media (min-width: 425px) {
+    .imgCustomMobile {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .imgCustomMobile {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .imgCustomMobile {
+        height: 400px;
+    }
+}

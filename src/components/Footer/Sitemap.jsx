@@ -17,7 +17,7 @@ function Sitemap() {
       <div className="container-footer-info">
         <Row>
           <Col sm={4} lg={4}>
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: "none" }}>
               {(() => {
                 if (location.pathname === "/") {
                   return (
@@ -41,7 +41,7 @@ function Sitemap() {
 
         <Row>
           <Col sm={4} lg={4}>
-            <Link to={"/AllProjects"}>
+            <Link to="/AllProjects" style={{ textDecoration: "none" }}>
               {(() => {
                 if (location.pathname === "/AllProjects") {
                   return (
@@ -56,7 +56,7 @@ function Sitemap() {
             </Link>
           </Col>
           <Col sm={4} lg={4}>
-            <Link to="/Contact">
+            <Link to="/Contact" style={{ textDecoration: "none" }}>
               {(() => {
                 if (location.pathname === "/Contact") {
                   return (

@@ -2,6 +2,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
+import { Link } from "react-router-dom";
+
 function ProjectDesktop() {
   return (
     <section>
@@ -24,7 +26,10 @@ function ProjectDesktop() {
               dos melhores restau-rantes de São paula. Um lugar perfeito para
               levar sua família e relaxar...
             </p>
-            <Button className="button-project-desktop">Ver projeto</Button>
+
+            <Link to="/AllProjects/Pesto">
+              <Button className="button-project-desktop">Ver projeto</Button>
+            </Link>
           </div>
         </Col>
       </Row>
@@ -38,7 +43,10 @@ function ProjectDesktop() {
               os seus horários de forma simples e fácil. Pensado para deixar sua
               usabilidade a melhor possível para você.
             </p>
-            <Button className="button-project-desktop">Ver projeto</Button>
+
+            <Link to="/AllProjects/ClayPhone">
+              <Button className="button-project-desktop">Ver projeto</Button>
+            </Link>
           </div>
         </Col>
 

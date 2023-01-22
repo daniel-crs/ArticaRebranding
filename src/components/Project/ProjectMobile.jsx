@@ -28,6 +28,7 @@ function ProjectMobile() {
           cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
             horários de forma simples. Pensado para deixar sua usa-bilidade
             a melhor possível para você."
+          linkText="/AllProjects/ClayPhone"
         />
       </SwiperSlide>
 
@@ -46,6 +47,7 @@ function ProjectMobile() {
           title="Pesto Itallian Food"
           cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
             de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
+          linkText="/AllProjects/Pesto"
         />
       </SwiperSlide>
     </Swiper>
