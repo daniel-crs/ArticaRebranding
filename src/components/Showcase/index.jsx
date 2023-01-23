@@ -31,9 +31,11 @@ function Showcase() {
           {(() => {
             if (windowSize.innerWidth < 768) {
               return (
-                <button type="button" className="btn-about-us">
-                  Sobre nós
-                </button>
+                <a href="#about-us-Target">
+                  <button type="button" className="btn-about-us">
+                    Sobre nós
+                  </button>
+                </a>
               );
             } else {
               return null;

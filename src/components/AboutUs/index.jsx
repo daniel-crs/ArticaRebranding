@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 function AboutUs() {
   return (
     <Container>
-      <div>
+      <div id="about-us-Target">
         <h2 className="about-us-title">Sobre nós</h2>
         <p className="about-us-text">
           Artica é uma equipe de desenvolvimento de software especializada nas

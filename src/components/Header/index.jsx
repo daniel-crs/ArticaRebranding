@@ -42,13 +42,13 @@ function Header() {
               </nav-item>
 
               <nav-item>
-                <Nav.Link href="#Sobre Nós">
+                <Nav.Link href="/#about-us-Target">
                   <p className="navbar-style-link">Sobre Nós</p>
                 </Nav.Link>
               </nav-item>
 
               <nav-item>
-                <Nav.Link href="#Serviços">
+                <Nav.Link href="/#service-division">
                   <p className="navbar-style-link">Serviços</p>
                 </Nav.Link>
               </nav-item>

@@ -23,14 +23,17 @@ function ServiceCards({ title, subtitle, cardText }) {
         </Col>
 
         <Col sm={12} md={4}>
-          <div className="container-icon space-top justify-content-center">
-            <BsLaptop className="icon" />
+          <div id="division-between-cards">
+            <div className="container-icon space-top justify-content-center">
+              <BsLaptop className="icon" />
+            </div>
+            <h3 className="custom-card-service">Web Sites</h3>
+            <p className="container-services-info-size">
+              Sites modernos e responsivos para lojas virtuais ou sites
+              pessoais.
+            </p>
+            <hr className="bottom-bar-service"></hr>
           </div>
-          <h3 className="custom-card-service">Web Sites</h3>
-          <p className="container-services-info-size">
-            Sites modernos e responsivos para lojas virtuais ou sites pessoais.
-          </p>
-          <hr className="bottom-bar-service"></hr>
         </Col>
 
         <Col sm={12} md={4}>
