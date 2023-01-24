@@ -56,7 +56,7 @@ function Header() {
               <nav-item>
                 <Nav.Link href="/AllProjects">
                   {(() => {
-                    if (location.pathname === "/AllProjects") {
+                    if (location.pathname.startsWith("/All")) {
                       return (
                         <p className="navbar-style-link" id="ativa">
                           Projetos

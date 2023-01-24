@@ -47,7 +47,7 @@ function Sitemap() {
           <Col sm={4} lg={4}>
             <Link to="/AllProjects" style={{ textDecoration: "none" }}>
               {(() => {
-                if (location.pathname === "/AllProjects") {
+                if (location.pathname.startsWith("/All")) {
                   return (
                     <p className="sitemap-footer-info" id="ativa">
                       Projetos
