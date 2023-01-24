@@ -1,0 +1,54 @@
+.imgCustomMobile {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 320px) {
+    .imgCustomMobile {
+        width: 300px !important;
+        height: 200px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (min-width: 375px) {
+    .imgCustomMobile {
+        width: 350px !important;
+        height: 225px;
+    }
+}
+
+@media (min-width: 425px) {
+    .imgCustomMobile {
+        width: 400px !important;
+        height: 250px;
+    }
+}
+
+@media (min-width: 768px) {
+    .imgCustomMobile {
+        width: 350px !important;
+        height: 225px;
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .imgCustomMobile {
+        width: 425px !important;
+        height: 275px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .imgCustomMobile {
+        width: 575px !important;
+        height: 375px;
+        padding-left: 55px;
+        padding-right: 0px;
+    }
+}

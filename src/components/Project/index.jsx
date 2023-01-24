@@ -1,4 +1,5 @@
-import "./project.css";
+import "./mobileProject.css";
+import "./desktopProject.css";
 
 import ProjectMobile from "./ProjectMobile";
 import ProjectDesktop from "./ProjectDesktop";

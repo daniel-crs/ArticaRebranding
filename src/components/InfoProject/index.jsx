@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 function InfoProject() {
   return (
     <Container fluid className="bg-projectInfo">
-      <div className="container-projectInfo">
+      <div id="project-target" className="container-projectInfo">
         <h2>Projetos</h2>
         <div>
           <p className="text-projectInfo">
@@ -16,7 +16,7 @@ function InfoProject() {
           </p>
         </div>
 
-        <Link to={"AllProjects"}>
+        <Link to={"/AllProjects#project-target"}>
           <Button className="button-project">Todos nossos projetos</Button>
         </Link>
       </div>

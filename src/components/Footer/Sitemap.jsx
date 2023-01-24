@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Sitemap() {
+  const location = useLocation();
+
   return (
     <div>
       <div className="sitemap-footer-title">
@@ -14,29 +17,61 @@ function Sitemap() {
       <div className="container-footer-info">
         <Row>
           <Col sm={4} lg={4}>
-            <Link to="/">
-              <p id="ativa" className="sitemap-footer-info">
-                Home
-              </p>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {(() => {
+                if (location.pathname === "/") {
+                  return (
+                    <p className="sitemap-footer-info" id="ativa">
+                      Home
+                    </p>
+                  );
+                } else {
+                  return <p className="sitemap-footer-info">Home</p>;
+                }
+              })()}
             </Link>
           </Col>
           <Col sm={4} lg={4}>
-            <p className="sitemap-footer-info">Sobre Nós</p>
+            <a href="/#about-us-Target" style={{ textDecoration: "none" }}>
+              <p className="sitemap-footer-info">Sobre Nós</p>
+            </a>
           </Col>
           <Col sm={4} lg={4}>
-            <p className="sitemap-footer-info">Serviços</p>
+            <a href="/#service-division" style={{ textDecoration: "none" }}>
+              <p className="sitemap-footer-info">Serviços</p>
+            </a>
           </Col>
         </Row>
 
         <Row>
           <Col sm={4} lg={4}>
-            <Link to={"/AllProjects"}>
-              <p className="sitemap-footer-info">Projetos</p>
+            <Link to="/AllProjects" style={{ textDecoration: "none" }}>
+              {(() => {
+                if (location.pathname.startsWith("/All")) {
+                  return (
+                    <p className="sitemap-footer-info" id="ativa">
+                      Projetos
+                    </p>
+                  );
+                } else {
+                  return <p className="sitemap-footer-info">Projetos</p>;
+                }
+              })()}
             </Link>
           </Col>
           <Col sm={4} lg={4}>
-            <Link to="/Contact">
-              <p className="sitemap-footer-info">Contatos</p>
+            <Link to="/Contact" style={{ textDecoration: "none" }}>
+              {(() => {
+                if (location.pathname === "/Contact") {
+                  return (
+                    <p className="sitemap-footer-info" id="ativa">
+                      Contatos
+                    </p>
+                  );
+                } else {
+                  return <p className="sitemap-footer-info">Contatos</p>;
+                }
+              })()}
             </Link>
           </Col>
         </Row>

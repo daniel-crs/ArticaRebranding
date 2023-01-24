@@ -1,0 +1,85 @@
+.custom-Card-project-text-desktop {
+    color: #fff;
+}
+
+.button-project-desktop {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid #fff !important;
+    border-radius: 10px;
+}
+
+.button-project-desktop:hover {
+    background: #437DBF !important;
+    color: #000 !important;
+    border: 2px solid #437DBF !important;
+}
+
+@media (min-width: 768px) {
+    #space-between-project-cards {
+        margin: 50px 0;
+    }
+
+    .custom-img-project-desktop {
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .custom-project-title-desktop {
+        margin-top: 25px;
+    }
+
+    .custom-Card-project-text-desktop {
+        color: #fff;
+        width: 100%;
+    }
+
+    .button-project-desktop {
+        width: 220px !important;
+        padding: 8px 0 !important;
+    }
+}
+
+@media (min-width: 1020px) {
+    #space-between-project-cards-desktop {
+        margin: 50px 0;
+    }
+
+    .custom-img-project-desktop {
+        height: 400px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .custom-project-title-desktop {
+        margin-top: 60px;
+    }
+
+    .custom-Card-project-text-desktop {
+        color: #fff;
+        width: 100%;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1444px) {
+    #space-between-project-cards-desktop {
+        margin: 50px 0;
+    }
+
+    .custom-img-project-desktop {
+        height: 400px;
+        width: 625px;
+        border-radius: 10px;
+    }
+
+    .custom-project-title-desktop {
+        margin-top: 60px;
+    }
+
+    .custom-Card-project-text-desktop {
+        color: #fff;
+        width: 600px;
+        font-size: 1.4em;
+    }
+}

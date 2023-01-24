@@ -1,0 +1,37 @@
+.customInfo {
+    width: 100%;
+}
+
+@media (min-width: 320px) {
+    .customInfo {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 380px) {
+    .customInfo {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) {
+    #space-between-info-elements {
+        margin-top: 75px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #space-between-info-elements {
+        font-size: 1.8em;
+    }
+
+    .customInfo {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1440px) {
+    #space-between-info-elements {
+        margin-top: 100px;
+    }
+}
