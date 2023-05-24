@@ -5,11 +5,19 @@ import { Link } from "react-router-dom";
 function ProjectCards({ imgProject, title, cardText, linkText }) {
   return (
     <Card className="containerCardProject">
-      <Card.Img className="custom-img-project" variant="top" src={imgProject} />
+      <Link to={linkText}>
+        <Card.Img
+          className="custom-img-project"
+          variant="top"
+          src={imgProject}
+        />
+      </Link>
       <Card.Body className="pb-5 custom-Card-title">
-        <Card.Title>
-          <h3>{title}</h3>
-        </Card.Title>
+        <Link to={linkText} style={{ textDecoration: "none" }}>
+          <Card.Title>
+            <h3>{title}</h3>
+          </Card.Title>
+        </Link>
         <Card.Text className="custom-Card-project-text">
           <p>{cardText}</p>
         </Card.Text>

@@ -23,6 +23,16 @@ function ProjectMobile() {
     >
       <SwiperSlide>
         <ProjectCards
+          imgProject="../../img/img-test-4.webp"
+          title="Pesto Itallian Food"
+          cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
+            de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
+          linkText="/AllProjects/Pesto"
+        />
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <ProjectCards
           imgProject="../../img/img-test-1.jpg"
           title="ClayPhone"
           cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
@@ -38,16 +48,7 @@ function ProjectMobile() {
           title="Free Delivery"
           cardText="Um aplicativo especializado em deliveries dos mais variados produtos com muita
             eficiência e os valores mais competitivos do mercado. Não perca..."
-        />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <ProjectCards
-          imgProject="../../img/img-test-4.webp"
-          title="Pesto Itallian Food"
-          cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
-            de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
-          linkText="/AllProjects/Pesto"
+          linkText="/AllProjects/ClayPhone"
         />
       </SwiperSlide>
     </Swiper>
