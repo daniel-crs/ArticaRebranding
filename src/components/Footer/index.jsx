@@ -25,19 +25,19 @@ function Footer() {
 
         <div className="icon-container">
           <div>
-            <a href="#home">
+            <a href="https://api.whatsapp.com/send?phone=5517996385447&text=Olá!%20Eu%20tenho%20interesse%20em%20fazer%20um%20projeto%20com%20vocês">
               <BsWhatsapp className="icon-logo whatsapp" />
             </a>
           </div>
 
           <div>
-            <a href="#home">
+            <a href="https://www.linkedin.com/company/artica-dev-team">
               <BsLinkedin className="icon-logo linkedin" />
             </a>
           </div>
 
           <div>
-            <a href="#home">
+            <a href="mailto:articadevteam@gmail.com">
               <CgMail className="icon-logo gmail" />
             </a>
           </div>

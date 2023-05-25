@@ -32,13 +32,13 @@ function Sitemap() {
             </Link>
           </Col>
           <Col sm={4} lg={4}>
-            <a href="/#about-us-Target" style={{ textDecoration: "none" }}>
-              <p className="sitemap-footer-info">Sobre Nós</p>
+            <a href="/#service-division" style={{ textDecoration: "none" }}>
+              <p className="sitemap-footer-info">Serviços</p>
             </a>
           </Col>
           <Col sm={4} lg={4}>
-            <a href="/#service-division" style={{ textDecoration: "none" }}>
-              <p className="sitemap-footer-info">Serviços</p>
+            <a href="/#about-us-Target" style={{ textDecoration: "none" }}>
+              <p className="sitemap-footer-info">Sobre Nós</p>
             </a>
           </Col>
         </Row>
