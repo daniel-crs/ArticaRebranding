@@ -2,6 +2,7 @@ import "./footer.css";
 
 import ArticaInfo from "./ArticaInfo";
 import Sitemap from "./Sitemap";
+import CurrentYear from "./App";
 
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
@@ -44,7 +45,7 @@ function Footer() {
         </div>
 
         <div className="copyright-footer">
-          © 2022 Artica | todos os direitos reservados.
+          <CurrentYear />
         </div>
       </Container>
     </section>
