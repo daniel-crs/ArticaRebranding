@@ -39,7 +39,6 @@ function Working() {
           },
         }}
         modules={[Pagination, Navigation]}
-        loop
       >
         <SwiperSlide>
           <WorkingCard
