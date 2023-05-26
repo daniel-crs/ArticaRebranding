@@ -10,7 +10,13 @@ import Budget from "../../components/Budget";
 import AboutUs from "../../components/AboutUs";
 import Doubts from "../../components/Doubts";
 
+import { useEffect } from "react";
+
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Header />
