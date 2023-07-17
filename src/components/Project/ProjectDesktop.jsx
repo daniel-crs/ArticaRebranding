@@ -1,10 +1,24 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
 function ProjectDesktop() {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/posts";
+    fetch(url)
+      .then((res) => res.json())
+      .then((post) => {
+        setData(post.data);
+      });
+  }, []);
+
+  console.log(data);
+
   return (
     <section>
       <Row>

@@ -2,31 +2,32 @@ import "../../components/Project/mobileProject.css";
 import "./customCards.css";
 
 import Header from "../../components/Header";
-import ProjectCards from "../../components/Project/ProjectCards";
 import Footer from "../../components/Footer";
 
-import useFetch from "../../kooks/useFetch";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const qs = require("qs");
-  const query = qs.stringify(
-    {
-      populate: "*",
-    },
-    {
-      encodeValuesOnly: true, // prettify URL
-    }
-  );
+  const [data, setData] = useState([]);
 
-  const { data } = useFetch("http://localhost:1337/api/posts?${query}");
+  useEffect(() => {
+    const url = "http://localhost:1337/api/posts";
+    fetch(url)
+      .then((res) => res.json())
+      .then((post) => {
+        setData(post.data);
+      });
+  }, []);
 
   console.log(data);
 
@@ -45,12 +46,77 @@ function Contact() {
             {data.map((post, i) => (
               <Col sm={12} md={6} xl={4}>
                 <div key={i} className="space-between-cards">
-                  <ProjectCards
-                    imgProject={post.attributes.coverImg}
-                    title={post.attributes.title}
-                    cardText={post.attributes.description}
-                    linkText="/AllProjects/ClayPhone"
-                  />
+                  {(() => {
+                    if (post.attributes.device === "Desktop") {
+                      return (
+                        <Card className="containerCardProject">
+                          <Link to={`/AllProjects/DesktopPage/${post.id}`}>
+                            <Card.Img
+                              className="custom-img-project"
+                              variant="top"
+                              src={post.attributes.coverImg}
+                            />
+                          </Link>
+                          <Card.Body className="pb-5 custom-Card-title">
+                            <Link
+                              to={`/AllProjects/DesktopPage/${post.id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <Card.Title>
+                                <h3>{post.attributes.title}</h3>
+                              </Card.Title>
+                            </Link>
+                            <Card.Text className="custom-Card-project-text">
+                              <p>
+                                {post.attributes.description.substring(0, 170)}
+                              </p>
+                            </Card.Text>
+                            <div className="spaceProjectBtn">
+                              <Link to={`/AllProjects/DesktopPage/${post.id}`}>
+                                <Button className="button-project">
+                                  Ver projetos
+                                </Button>
+                              </Link>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      );
+                    } else {
+                      return (
+                        <Card className="containerCardProject">
+                          <Link to={`/AllProjects/MobilePage/${post.id}`}>
+                            <Card.Img
+                              className="custom-img-project"
+                              variant="top"
+                              src={post.attributes.coverImg}
+                            />
+                          </Link>
+                          <Card.Body className="pb-5 custom-Card-title">
+                            <Link
+                              to={`/AllProjects/MobilePage/${post.id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <Card.Title>
+                                <h3>{post.attributes.title}</h3>
+                              </Card.Title>
+                            </Link>
+                            <Card.Text className="custom-Card-project-text">
+                              <p>
+                                {post.attributes.description.substring(0, 170)}
+                              </p>
+                            </Card.Text>
+                            <div className="spaceProjectBtn">
+                              <Link to={`/AllProjects/MobilePage/${post.id}`}>
+                                <Button className="button-project">
+                                  Ver projetos
+                                </Button>
+                              </Link>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      );
+                    }
+                  })()}
                 </div>
               </Col>
             ))}

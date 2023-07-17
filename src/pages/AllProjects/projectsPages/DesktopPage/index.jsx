@@ -1,5 +1,4 @@
 import Header from "../../../../components/Header";
-import DesktopImg from "../components/DesktopImg";
 import Info from "../components/InfoProject";
 import Challenge from "../components/Challenge";
 import DesktopBtn from "../components/DesktopButton";
@@ -8,12 +7,27 @@ import Footer from "../../../../components/Footer";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-function Pesto() {
+export default function Desktop({}) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const { id } = useParams();
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/posts/" + id;
+    fetch(url)
+      .then((res) => res.json())
+      .then((post) => {
+        setData(post.data);
+      });
+  }, []);
+
+  console.log(data);
 
   return (
     <div>
@@ -22,30 +36,22 @@ function Pesto() {
       <Container>
         <Row>
           <Col sm={12} md={6}>
-            <DesktopImg
+            {/* <DesktopImg
               img1="../../../img/img-test-4.webp"
               img2="../../../img/img-test-4.webp"
               img3="../../../img/img-test-4.webp"
-            />
+            /> */}
           </Col>
           <Col sm={12} md={6}>
             <Info
-              projectInfoTitle="Pesto Itallian Food"
-              projectInfoText="Pesto e um restaurante italiano delicioso que te traz uma experiência
-            idêntica a de comer na própria Itália. Certamente um dos melhores
-            restau-rantes de São paula. Um lugar perfeito para levar sua família aos
-            finais de semana para relaxar com estilo."
+              projectInfoTitle={data?.attributes?.title || ""}
+              projectInfoText={data?.attributes?.description || ""}
             />
           </Col>
         </Row>
 
         <div>
-          <Challenge
-            challengeText="Devido à abundância de clientes, constantemente
-            interessados pelas delícias do restaurante pesto. Tivemos o grande desafio
-            de criar um site repleto de funcionalidades, mas que fosse muito bem
-            otimizado para garantir  velocidade e confiabilidade a este site. "
-          />
+          <Challenge challengeText={data?.attributes?.challenger || ""} />
         </div>
 
         <div>
@@ -57,5 +63,3 @@ function Pesto() {
     </div>
   );
 }
-
-export default Pesto;
