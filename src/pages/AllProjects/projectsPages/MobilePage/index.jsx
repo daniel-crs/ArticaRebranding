@@ -10,7 +10,7 @@ import Col from "react-bootstrap/Col";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export default function MobilePage({}) {
+export default function MobilePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -25,7 +25,7 @@ export default function MobilePage({}) {
       .then((post) => {
         setData(post.data);
       });
-  }, []);
+  });
 
   console.log(data);
 
