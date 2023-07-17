@@ -19,7 +19,7 @@ function ProjectCards({ imgProject, title, cardText, linkText }) {
           </Card.Title>
         </Link>
         <Card.Text className="custom-Card-project-text">
-          <p>{cardText}</p>
+          <p>{cardText.substring(0, 170)}...</p>
         </Card.Text>
         <div className="spaceProjectBtn">
           <Link to={linkText}>

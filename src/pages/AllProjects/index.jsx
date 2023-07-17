@@ -2,18 +2,34 @@ import "../../components/Project/mobileProject.css";
 import "./customCards.css";
 
 import Header from "../../components/Header";
-import ProjectCards from "../../components/Project/ProjectCards";
 import Footer from "../../components/Footer";
+
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/posts";
+    fetch(url)
+      .then((res) => res.json())
+      .then((post) => {
+        setData(post.data);
+      });
+  }, []);
+
+  console.log(data);
 
   return (
     <div>
@@ -27,77 +43,83 @@ function Contact() {
 
         <section>
           <Row>
-            <Col sm={12} md={6} xl={4}>
-              <div className="space-between-cards">
-                <ProjectCards
-                  imgProject="../../img/img-test-1.jpg"
-                  title="ClayPhone"
-                  cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
-                horários de forma simples. Pensado para deixar sua usa-bilidade
-                a melhor possível para você."
-                  linkText="/AllProjects/ClayPhone"
-                />
-              </div>
-            </Col>
-
-            <Col sm={12} md={6} xl={4}>
-              <div className="space-between-cards">
-                <ProjectCards
-                  imgProject="../../img/img-test-5.png"
-                  title="Free Delivery"
-                  cardText="Um aplicativo especializado em deliveries dos mais variados produtos com muita
-                eficiência e os valores mais competitivos do mercado. Não perca..."
-                />
-              </div>
-            </Col>
-
-            <Col sm={12} md={6} xl={4}>
-              <div className="space-between-cards">
-                <ProjectCards
-                  imgProject="../../img/img-test-4.webp"
-                  title="Pesto Itallian Food"
-                  cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
-                de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
-                  linkText="/AllProjects/Pesto"
-                />
-              </div>
-            </Col>
-
-            <Col sm={12} md={6} xl={4}>
-              <div className="space-between-cards">
-                <ProjectCards
-                  imgProject="../../img/img-test-1.jpg"
-                  title="ClayPhone"
-                  cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
-                horários de forma simples. Pensado para deixar sua usa-bilidade
-                a melhor possível para você."
-                  linkText="/AllProjects/ClayPhone"
-                />
-              </div>
-            </Col>
-
-            <Col sm={12} md={6} xl={4}>
-              <div className="space-between-cards">
-                <ProjectCards
-                  imgProject="../../img/img-test-5.png"
-                  title="Free Delivery"
-                  cardText="Um aplicativo especializado em deliveries dos mais variados produtos com muita
-                eficiência e os valores mais competitivos do mercado. Não perca..."
-                />
-              </div>
-            </Col>
-
-            <Col sm={12} md={6} xl={4}>
-              <div className="space-between-cards">
-                <ProjectCards
-                  imgProject="../../img/img-test-4.webp"
-                  title="Pesto Itallian Food"
-                  cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
-                de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
-                  linkText="/AllProjects/Pesto"
-                />
-              </div>
-            </Col>
+            {data.map((post, i) => (
+              <Col sm={12} md={6} xl={4}>
+                <div key={i} className="space-between-cards">
+                  {(() => {
+                    if (post.attributes.device === "Desktop") {
+                      return (
+                        <Card className="containerCardProject">
+                          <Link to={`/AllProjects/DesktopPage/${post.id}`}>
+                            <Card.Img
+                              className="custom-img-project"
+                              variant="top"
+                              src={post.attributes.coverImg}
+                            />
+                          </Link>
+                          <Card.Body className="pb-5 custom-Card-title">
+                            <Link
+                              to={`/AllProjects/DesktopPage/${post.id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <Card.Title>
+                                <h3>{post.attributes.title}</h3>
+                              </Card.Title>
+                            </Link>
+                            <Card.Text className="custom-Card-project-text">
+                              <p>
+                                {post.attributes.description.substring(0, 170)}
+                              </p>
+                            </Card.Text>
+                            <div className="spaceProjectBtn">
+                              <Link to={`/AllProjects/DesktopPage/${post.id}`}>
+                                <Button className="button-project">
+                                  Ver projetos
+                                </Button>
+                              </Link>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      );
+                    } else {
+                      return (
+                        <Card className="containerCardProject">
+                          <Link to={`/AllProjects/MobilePage/${post.id}`}>
+                            <Card.Img
+                              className="custom-img-project"
+                              variant="top"
+                              src={post.attributes.coverImg}
+                            />
+                          </Link>
+                          <Card.Body className="pb-5 custom-Card-title">
+                            <Link
+                              to={`/AllProjects/MobilePage/${post.id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <Card.Title>
+                                <h3>{post.attributes.title}</h3>
+                              </Card.Title>
+                            </Link>
+                            <Card.Text className="custom-Card-project-text">
+                              <p>
+                                {post.attributes.description.substring(0, 170)}
+                              </p>
+                            </Card.Text>
+                            <div className="spaceProjectBtn">
+                              <Link to={`/AllProjects/MobilePage/${post.id}`}>
+                                <Button className="button-project">
+                                  Ver projetos
+                                </Button>
+                              </Link>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      );
+                    }
+                  })()}
+                </div>
+              </Col>
+            ))}
           </Row>
         </section>
       </Container>
