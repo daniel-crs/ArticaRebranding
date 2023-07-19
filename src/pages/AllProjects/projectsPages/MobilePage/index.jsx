@@ -56,7 +56,10 @@ export default function MobilePage() {
         </div>
 
         <div>
-          <MobileBtn />
+          <MobileBtn
+            appGoogleLink={data?.attributes?.googleStoreLink || ""}
+            appAppleLink={data?.attributes?.appleStoreLink || ""}
+          />
         </div>
       </Container>
 

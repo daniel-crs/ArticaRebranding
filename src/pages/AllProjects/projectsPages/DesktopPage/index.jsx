@@ -3,6 +3,7 @@ import Info from "../components/InfoProject";
 import Challenge from "../components/Challenge";
 import DesktopBtn from "../components/DesktopButton";
 import Footer from "../../../../components/Footer";
+// import DesktopImg from "../components/DesktopImg";
 
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
@@ -15,11 +16,11 @@ export default function Desktop() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { id } = useParams();
+  const { id } = useParams("1");
   const [data, setData] = useState();
 
   useEffect(() => {
-    const url = "http://localhost:1337/api/posts/" + id;
+    const url = "http://localhost:1337/api/posts/" + id + "?populate=*";
     fetch(url)
       .then((res) => res.json())
       .then((post) => {
@@ -37,9 +38,10 @@ export default function Desktop() {
         <Row>
           <Col sm={12} md={6}>
             {/* <DesktopImg
-              img1="../../../img/img-test-4.webp"
-              img2="../../../img/img-test-4.webp"
-              img3="../../../img/img-test-4.webp"
+              src={
+                "http://localhost:1337" +
+                  data?.attributes?.imgs.data.attributes.url || ""
+              }
             /> */}
           </Col>
           <Col sm={12} md={6}>
