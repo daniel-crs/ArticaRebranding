@@ -3,8 +3,25 @@ import ProjectCards from "./ProjectCards";
 // core version + navigation, pagination modules:
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useEffect } from "react";
 
 function ProjectMobile() {
+  const [armazena, setArmazena] = useState([]);
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/posts?populate=*";
+    fetch(url)
+      .then((res) => res.json())
+      .then((post) => {
+        const temporario = post.data.filter(
+          (separa) => separa.attributes.favorite === "Yes"
+        );
+        setArmazena(temporario);
+      });
+  }, []);
+
+  console.log(armazena);
+
   return (
     <Swiper
       slidesPerView={1}
@@ -21,36 +38,43 @@ function ProjectMobile() {
       modules={[Pagination, Navigation]}
       loop
     >
-      <SwiperSlide>
-        <ProjectCards
-          imgProject="../../img/img-test-4.webp"
-          title="Pesto Itallian Food"
-          cardText="Pesto e um restaurante italiano que te traz uma experiência idêntica a
-            de comer na própria Itália. Certamente um dos melhores restaurantes de São Paulo..."
-          linkText="/AllProjects/Pesto"
-        />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <ProjectCards
-          imgProject="../../img/img-test-1.jpg"
-          title="ClayPhone"
-          cardText="ClayPhone é um aplicativo para te ajudar a organizar os seus
-            horários de forma simples. Pensado para deixar sua usa-bilidade
-            a melhor possível para você."
-          linkText="/AllProjects/ClayPhone"
-        />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <ProjectCards
-          imgProject="../../img/img-test-5.png"
-          title="Free Delivery"
-          cardText="Um aplicativo especializado em deliveries dos mais variados produtos com muita
-            eficiência e os valores mais competitivos do mercado. Não perca..."
-          linkText="/AllProjects/ClayPhone"
-        />
-      </SwiperSlide>
+      <div>
+        {armazena.map((post, i) => (
+          <div key={i}>
+            {(() => {
+              if (post.id % 2 !== 0) {
+                return (
+                  <SwiperSlide>
+                    <ProjectCards
+                      imgProject={
+                        "http://localhost:1337" +
+                        post.attributes.coverImg.data.attributes.url
+                      }
+                      title={post.attributes.title}
+                      cardText={post.attributes.description}
+                      linkText={`/AllProjects/DesktopPage/${post.id}`}
+                    />
+                  </SwiperSlide>
+                );
+              } else {
+                return (
+                  <SwiperSlide>
+                    <ProjectCards
+                      imgProject={
+                        "http://localhost:1337" +
+                        post.attributes.coverImg.data.attributes.url
+                      }
+                      title={post.attributes.title}
+                      cardText={post.attributes.description}
+                      linkText={`/AllProjects/MobilePage/${post.id}`}
+                    />
+                  </SwiperSlide>
+                );
+              }
+            })()}
+          </div>
+        ))}
+      </div>
     </Swiper>
   );
 }
