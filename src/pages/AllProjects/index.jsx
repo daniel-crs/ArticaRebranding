@@ -21,7 +21,7 @@ function Contact() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:1337/api/posts";
+    const url = "http://localhost:1337/api/posts?populate=*";
     fetch(url)
       .then((res) => res.json())
       .then((post) => {
@@ -54,7 +54,10 @@ function Contact() {
                             <Card.Img
                               className="custom-img-project"
                               variant="top"
-                              src={post.attributes.coverImg}
+                              src={
+                                "http://localhost:1337" +
+                                post.attributes.coverImg.data.attributes.url
+                              }
                             />
                           </Link>
                           <Card.Body className="pb-5 custom-Card-title">
@@ -88,7 +91,10 @@ function Contact() {
                             <Card.Img
                               className="custom-img-project"
                               variant="top"
-                              src={post.attributes.coverImg}
+                              src={
+                                "http://localhost:1337" +
+                                post.attributes.coverImg.data.attributes.url
+                              }
                             />
                           </Link>
                           <Card.Body className="pb-5 custom-Card-title">

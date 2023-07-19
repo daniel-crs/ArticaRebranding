@@ -2,18 +2,30 @@ import "./aboutUs.css";
 
 import Container from "react-bootstrap/Container";
 
+import { useState, useEffect } from "react";
+
 function AboutUs() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/biografias";
+    fetch(url)
+      .then((res) => res.json())
+      .then((biografia) => {
+        setData(biografia.data);
+      });
+  }, []);
+
+  console.log(data);
+
   return (
     <Container>
-      <div id="about-us-Target">
-        <h2 className="about-us-title">Sobre nós</h2>
-        <p className="about-us-text">
-          Artica é uma equipe de desenvolvimento de software especializada nas
-          mais modernas tecnologias para tornar sua ideia realidade. Trabalhamos
-          com aplicativos, automatização, sites, ciência de dados e quaisquer
-          outras áreas que você precise.
-        </p>
-      </div>
+      {data.map((bio, i) => (
+        <div key={i} id="about-us-Target">
+          <h2 className="about-us-title">{bio.attributes.title}</h2>
+          <p className="about-us-text">{bio.attributes.text}</p>
+        </div>
+      ))}
     </Container>
   );
 }

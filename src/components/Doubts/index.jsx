@@ -1,9 +1,23 @@
 import "./doubts.css";
-
-import { Container } from "react-bootstrap";
 import DoubtsCard from "./Card";
 
+import { Container } from "react-bootstrap";
+import { useState, useEffect } from "react";
+
 function Doubts() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/questions";
+    fetch(url)
+      .then((res) => res.json())
+      .then((biografia) => {
+        setData(biografia.data);
+      });
+  }, []);
+
+  console.log(data);
+
   return (
     <Container>
       <div>
@@ -14,30 +28,14 @@ function Doubts() {
       </div>
 
       <div>
-        <DoubtsCard
-          question="Minha ideia é mantida em segredo durante o desenvolvimento ?"
-          answer="Confidencialidade sera garantido por contrato, portanto suas ideia serão tratadas com total sigilo por nossa equipe de profissionais de tecnologia."
-        />
-
-        <DoubtsCard
-          question="Meu site continuara recebendo ma-nutenção com o tempo ?"
-          answer="Confidencialidade sera garantido por contrato, portanto suas ideia serão tratadas com total sigilo por nossa equipe de profissionais de tecnologia."
-        />
-
-        <DoubtsCard
-          question="Eu posso adicionar coisas durante o desenvolvimento ?"
-          answer="Confidencialidade sera garantido por contrato, portanto suas ideia serão tratadas com total sigilo por nossa equipe de profissionais de tecnologia."
-        />
-
-        <DoubtsCard
-          question="O que e preciso para eu ter meu próprio aplicativo ?"
-          answer="Confidencialidade sera garantido por contrato, portanto suas ideia serão tratadas com total sigilo por nossa equipe de profissionais de tecnologia."
-        />
-
-        <DoubtsCard
-          question="Para o meu site estar na internet, eu preciso pagar uma mensalidade ?"
-          answer="Confidencialidade sera garantido por contrato, portanto suas ideia serão tratadas com total sigilo por nossa equipe de profissionais de tecnologia."
-        />
+        {data.map((question, i) => (
+          <div key={i}>
+            <DoubtsCard
+              question={question.attributes.doubt}
+              answer={question.attributes.answer}
+            />
+          </div>
+        ))}
       </div>
     </Container>
   );

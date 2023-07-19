@@ -1,15 +1,16 @@
 import "./mobileButton.css";
+import { Link } from "react-router-dom";
 
-function MobileBtn() {
+function MobileBtn(appGoogleLink, appAppleLink) {
   return (
     <div className="elements-center">
-      <div>
+      <Link to={appGoogleLink}>
         <button type="button" className="mobileCustomBtn">
           Google Store
         </button>
-      </div>
+      </Link>
 
-      <div id="space-between-mobile-buttons">
+      <div to={appAppleLink} id="space-between-mobile-buttons">
         <button type="button" className="mobileCustomBtn">
           Apple store
         </button>
