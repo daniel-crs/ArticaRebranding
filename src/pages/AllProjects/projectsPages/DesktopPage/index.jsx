@@ -16,7 +16,7 @@ export default function Desktop() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { id } = useParams("1");
+  const { id } = useParams();
   const [data, setData] = useState();
 
   useEffect(() => {
