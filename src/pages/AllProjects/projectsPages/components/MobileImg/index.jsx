@@ -4,7 +4,7 @@ import "./mobileImage.css";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-function MobileImg({ img1, img2, img3, img4 }) {
+function MobileImg({ imgs }) {
   return (
     <div>
       <Swiper
@@ -16,21 +16,13 @@ function MobileImg({ img1, img2, img3, img4 }) {
         modules={[Pagination, Navigation]}
         loop
       >
-        <SwiperSlide>
-          <img src={img1} className="imgCustomMobile" alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={img2} className="imgCustomMobile" alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={img3} className="imgCustomMobile" alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={img4} className="imgCustomMobile" alt="" />
-        </SwiperSlide>
+        {imgs.map((img, i) => (
+          <div key={i}>
+            <SwiperSlide>
+              <img src={img} className="imgCustomMobile" alt="" />
+            </SwiperSlide>
+          </div>
+        ))}
       </Swiper>
     </div>
   );

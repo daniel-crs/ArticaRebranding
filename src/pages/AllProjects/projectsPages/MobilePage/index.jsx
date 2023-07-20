@@ -1,7 +1,8 @@
 import Header from "../../../../components/Header";
 import Info from "../components/InfoProject";
 import Challenge from "../components/Challenge";
-import MobileBtn from "../components/MobileButton";
+import "../components/MobileButton";
+import MobileImg from "../components/MobileImg";
 import Footer from "../../../../components/Footer";
 
 import { Container } from "react-bootstrap";
@@ -17,15 +18,20 @@ export default function MobilePage() {
 
   const { id } = useParams();
   const [data, setData] = useState();
+  const [img, setImg] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:1337/api/posts/" + id;
+    const url = "http://localhost:1337/api/posts/" + id + "?populate=*";
     fetch(url)
       .then((res) => res.json())
       .then((post) => {
+        const vetorImgs = post.data.attributes.imgs.data.map(
+          (img) => "http://localhost:1337" + img.attributes.url
+        );
+        setImg(vetorImgs);
         setData(post.data);
       });
-  });
+  }, [id]);
 
   console.log(data);
 
@@ -36,12 +42,7 @@ export default function MobilePage() {
       <Container>
         <Row>
           <Col sm={12} md={6}>
-            {/* <MobileImg
-              img1="../../../img/img-test-2.png"
-              img2="../../../img/img-test-2.png"
-              img3="../../../img/img-test-2.png"
-              img4="../../../img/img-test-2.png"
-            /> */}
+            <MobileImg imgs={img} />
           </Col>
           <Col sm={12} md={6}>
             <Info
@@ -55,11 +56,20 @@ export default function MobilePage() {
           <Challenge challengeText={data?.attributes?.challenger || ""} />
         </div>
 
-        <div>
-          <MobileBtn
-            appGoogleLink={data?.attributes?.googleStoreLink || ""}
-            appAppleLink={data?.attributes?.appleStoreLink || ""}
-          />
+        <div className="elements-center">
+          <a href={data?.attributes?.googleStoreLink || ""}>
+            <button type="button" className="mobileCustomBtn">
+              Google Store
+            </button>
+          </a>
+
+          <div id="space-between-mobile-buttons">
+            <a href={data?.attributes?.appleStoreLink || ""}>
+              <button type="button" className="mobileCustomBtn">
+                Apple store
+              </button>
+            </a>
+          </div>
         </div>
       </Container>
 

@@ -13,7 +13,7 @@ function Header() {
     <Navbar expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">
-          <img src="../img/logo.svg" alt="Logo" id="logo" />
+          <img src="/img/logo.svg" alt="Logo" id="logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle
