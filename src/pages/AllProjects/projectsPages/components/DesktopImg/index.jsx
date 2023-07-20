@@ -4,7 +4,7 @@ import "./desktopImg.css";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-function DesktopImage({ img1, img2, img3 }) {
+function DesktopImage({ imgs }) {
   return (
     <Swiper
       slidesPerView={1}
@@ -15,17 +15,13 @@ function DesktopImage({ img1, img2, img3 }) {
       modules={[Pagination, Navigation]}
       loop
     >
-      <SwiperSlide>
-        <img src={img1} className="imgCustom" alt="" />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <img src={img2} className="imgCustom" alt="" />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <img src={img3} className="imgCustom" alt="" />
-      </SwiperSlide>
+      {imgs.map((img, i) => (
+        <div key={i}>
+          <SwiperSlide>
+            <img src={img} className="imgCustom" alt="" />
+          </SwiperSlide>
+        </div>
+      ))}
     </Swiper>
   );
 }
