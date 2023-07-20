@@ -6,6 +6,8 @@ import Info from "./InfoCard";
 // core version + navigation, pagination modules:
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useEffect } from "react";
+
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,6 +16,17 @@ import "swiper/css/pagination";
 import Container from "react-bootstrap/Container";
 
 function Working() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/work-lists";
+    fetch(url)
+      .then((res) => res.json())
+      .then((workList) => {
+        setData(workList.data);
+      });
+  }, []);
+
   return (
     <Container>
       <Info />
@@ -40,48 +53,19 @@ function Working() {
         }}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide>
-          <WorkingCard
-            title="01"
-            subtitle="Reuniões"
-            cardText="Vamos realizar reuniões para entender os objetivos e funcionalidades que você deseja que tenha no seu projeto. Desta forma poderemos estipilar o valor do projeto precisar baseada no tempo para implementar."
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkingCard
-            title="02"
-            subtitle="Orçamento"
-            cardText="Após a primeira reunião, nos iremos calcular seu orçamento baseado nas funcionalidades que deveram estar presentes no seu projeto."
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkingCard
-            title="03"
-            subtitle="Prototipo "
-            cardText="Baseado nas reuniões, nesta etapa faremos protótipos do seu projeto para validar o design com você antes de desenvolver. "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkingCard
-            title="04"
-            subtitle="Sub-title"
-            cardText="Ainda por vir o texto"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkingCard
-            title="05"
-            subtitle="Sub-title"
-            cardText="Ainda por vir o texto"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkingCard
-            title="06"
-            subtitle="Sub-title"
-            cardText="Ainda por vir o texto"
-          />
-        </SwiperSlide>
+        <div>
+          {data.map((work, i) => (
+            <div key={i}>
+              <SwiperSlide>
+                <WorkingCard
+                  title={work.id}
+                  subtitle={work.attributes.title}
+                  cardText={work.attributes.text}
+                />
+              </SwiperSlide>
+            </div>
+          ))}
+        </div>
       </Swiper>
     </Container>
   );

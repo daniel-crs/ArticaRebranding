@@ -10,8 +10,22 @@ import Col from "react-bootstrap/Col";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
+import { useState, useEffect } from "react";
 
 function Footer() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const url = "http://localhost:1337/api/social-medias";
+    fetch(url)
+      .then((res) => res.json())
+      .then((social) => {
+        setData(social.data);
+      });
+  }, []);
+
+  console.log(data);
+
   return (
     <section className="footer-bg">
       <Container>
@@ -24,24 +38,30 @@ function Footer() {
           </Col>
         </Row>
 
-        <div className="icon-container">
-          <div>
-            <a href="https://api.whatsapp.com/send?phone=5517996385447&text=Olá!%20Eu%20tenho%20interesse%20em%20fazer%20um%20projeto%20com%20vocês">
-              <BsWhatsapp className="icon-logo whatsapp" />
-            </a>
-          </div>
+        <div>
+          {data.map((social, i) => (
+            <div key={i}>
+              <div className="icon-container">
+                <div>
+                  <a href={social.attributes.whatsappLink}>
+                    <BsWhatsapp className="icon-logo whatsapp" />
+                  </a>
+                </div>
 
-          <div>
-            <a href="https://www.linkedin.com/company/artica-dev-team">
-              <BsLinkedin className="icon-logo linkedin" />
-            </a>
-          </div>
+                <div>
+                  <a href={social.attributes.linkedinLink}>
+                    <BsLinkedin className="icon-logo linkedin" />
+                  </a>
+                </div>
 
-          <div>
-            <a href="mailto:articadevteam@gmail.com">
-              <CgMail className="icon-logo gmail" />
-            </a>
-          </div>
+                <div>
+                  <a href={social.attributes.emailLink}>
+                    <CgMail className="icon-logo gmail" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="copyright-footer">

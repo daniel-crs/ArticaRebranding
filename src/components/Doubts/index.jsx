@@ -11,8 +11,8 @@ function Doubts() {
     const url = "http://localhost:1337/api/questions";
     fetch(url)
       .then((res) => res.json())
-      .then((biografia) => {
-        setData(biografia.data);
+      .then((questions) => {
+        setData(questions.data);
       });
   }, []);
 
